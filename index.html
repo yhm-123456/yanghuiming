@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>杨蕙名 · 个人简历｜江西理工大学 机械电子工程 2026 级</title>
+
+    <!-- 分享与收录：微信 / QQ 等平台抓取的就是下面这几行 -->
+    <meta name="description" content="杨蕙名，江西理工大学机械电子工程 2026 级本科生。取得阿里云、华为云、科大讯飞、Datawhale 共 24 项 AI 认证，用 AI 独立完成《飞机大战》《坦克大战》《锦绣诗球》等上线作品。" />
+    <meta name="author" content="杨蕙名" />
+    <meta name="theme-color" content="#eef2f7" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="杨蕙名 · 个人简历" />
+    <meta property="og:title" content="杨蕙名 · 个人简历｜江西理工大学 机械电子工程 2026 级" />
+    <meta property="og:description" content="24 项 AI 认证 · 2 款上线小游戏 · 1 个 3D 诗词球网页 · 1 套 AI 辅助 PPT。" />
+    <meta property="og:image" content="avatar.webp" />
+    <meta property="og:image:alt" content="杨蕙名个人简历" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDZiNmQ0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNjM2NmYxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTUiIGZpbGw9InVybCgjZykiLz48dGV4dCB4PSIzMiIgeT0iNDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJQaW5nRmFuZyBTQyxNaWNyb3NvZnQgWWFIZWksc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiI+5p2oPC90ZXh0Pjwvc3ZnPg==" />
+
+    <link rel="preload" as="image" href="avatar.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #eef2f7;
+            color: #0f172a;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Glow blobs */
+        .glow-cyan {
+            position: fixed; top: -180px; left: -180px;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(6,182,212,0.07) 0%, transparent 70%);
+            filter: blur(140px); pointer-events: none; z-index: 0;
+        }
+        .glow-indigo {
+            position: fixed; bottom: -200px; right: -200px;
+            width: 650px; height: 650px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+            filter: blur(140px); pointer-events: none; z-index: 0;
+        }
+
+        /* Glass card
+           性能：默认不启用 backdrop-filter（几十张卡片叠加会让低端安卓掉帧），
+           只给真正需要的个别卡片加 .glass-blur */
+        .glass {
+            background: rgba(255,255,255,0.78);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 1rem;
+        }
+        .glass-blur {
+            background: rgba(255,255,255,0.62);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+        }
+        .glass-sm { border-radius: 0.75rem; }
+
+        /* 图标 sprite 容器：不占位、不参与布局 */
+        .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+        .ico { flex-shrink: 0; display: inline-block; vertical-align: -0.125em; }
+
+        /* Link underline */
+        .link-underline { position: relative; text-decoration: none; }
+        .link-underline::after {
+            content: ''; position: absolute; bottom: -1px; left: 0;
+            width: 0; height: 1px; background: #22d3ee;
+            transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        .link-underline:hover::after { width: 100%; }
+
+        /* Card hover */
+        .card-hover { transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            border-color: rgba(6,182,212,0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px -4px rgba(6,182,212,0.12);
+        }
+
+        /* Highlight card hover */
+        .highlight-card { transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+        .highlight-card:hover {
+            border-color: rgba(6,182,212,0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px -6px rgba(6,182,212,0.15);
+        }
+
+        /* Timeline */
+        .tl-line { position: absolute; left: 7px; top: 12px; bottom: 0; width: 2px; background: linear-gradient(to bottom, rgba(6,182,212,0.5), rgba(99,102,241,0.25)); border-radius: 1px; }
+        .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: rgba(6,182,212,0.12); border: 2px solid rgba(6,182,212,0.7); position: relative; z-index: 2; flex-shrink: 0; margin-top: 4px; }
+
+        /* Ping dot */
+        @keyframes ping-slow { 0% { transform: scale(1); opacity: 1; } 75%, 100% { transform: scale(2.2); opacity: 0; } }
+        .ping-dot::before {
+            content: ''; position: absolute; inset: 0; border-radius: 9999px;
+            background: #22C55E; animation: ping-slow 2s cubic-bezier(0,0,0.2,1) infinite;
+        }
+
+        /* Skill bar */
+        .skill-track { background: rgba(0,0,0,0.07); height: 6px; border-radius: 3px; overflow: hidden; }
+        .skill-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #06b6d4, #6366f1); transition: width 0.8s cubic-bezier(0.25,0.1,0.25,1); }
+
+        /* Toast */
+        .toast-msg {
+            position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(12px);
+            background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            color: #1e293b; padding: 10px 24px; border-radius: 12px;
+            font-size: 13px; font-weight: 500; opacity: 0; visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.25,0.1,0.25,1); z-index: 9999; white-space: nowrap;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .toast-msg.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+        /* Tab */
+        .tab-btn {
+            padding: 8px 0; font-size: 14px; color: #334155;
+            border-bottom: 2px solid transparent; transition: all 0.25s; cursor: pointer;
+            background: none; border-top: none; border-left: none; border-right: none; font-family: inherit;
+            white-space: nowrap; flex-shrink: 0;
+        }
+        .tab-btn:hover { color: #0f172a; }
+        .tab-btn.active { color: #0891b2; border-bottom-color: #0891b2; font-weight: 600; }
+
+        /* AI 证书横向标签：窄屏可左右滑动，标签按起点吸附 */
+        .cert-tabs {
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scroll-snap-type: x proximity;
+        }
+        .cert-tabs::-webkit-scrollbar { height: 4px; }
+        .cert-tabs .tab-btn {
+            display: inline-flex;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+        .cert-tabs .cert-tab-count {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 18px; height: 18px; margin-left: 6px; padding: 0 5px;
+            border-radius: 9999px; background: rgba(6,182,212,0.10);
+            border: 1px solid rgba(6,182,212,0.20); color: #0e7490;
+            font-size: 10px; font-weight: 700; line-height: 1;
+        }
+        .cert-tabs .tab-btn.active .cert-tab-count {
+            background: rgba(6,182,212,0.16); border-color: rgba(6,182,212,0.32);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4, #818cf8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Stat number */
+        .stat-number {
+            background: linear-gradient(135deg, #0891b2, #6366f1);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Button glow */
+        .btn-glow {
+            position: relative; overflow: hidden; transition: all 0.3s ease;
+        }
+        .btn-glow::before {
+            content: ''; position: absolute; inset: -1px; border-radius: inherit;
+            background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(99,102,241,0.2));
+            opacity: 0; transition: opacity 0.3s; z-index: -1;
+        }
+        .btn-glow:hover::before { opacity: 1; }
+        .btn-glow:hover { border-color: rgba(6,182,212,0.5); box-shadow: 0 0 16px -3px rgba(6,182,212,0.2); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.25); }
+
+        /* Fade in */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.10), transparent);
+        }
+
+        /* Nav glass */
+        .nav-glass {
+            background: rgba(238,242,247,0.80);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* Capsule badge */
+        .capsule {
+            display: inline-block; padding: 2px 10px; font-size: 11px; font-weight: 500;
+            background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.22);
+            color: #0e7490; border-radius: 9999px;
+        }
+
+        /* ============================================================
+           动态叙事动效引擎（纯原生 CSS / JS 驱动，无 AOS 等阻塞库）
+           降级原则：脚本未执行时 html 上没有 .js-anim，所有元素 opacity 恒为 1
+           ============================================================ */
+
+        /* ① 顶部全局滚动进度条（只写 transform，不触发重排） */
+        #scrollProgress {
+            position: fixed; top: 0; left: 0; height: 4px; width: 100%;
+            transform: scaleX(0); transform-origin: 0 50%;
+            z-index: 60; pointer-events: none; will-change: transform;
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.45);
+        }
+
+        /* 导航滚动后的层次感 */
+        .nav-scrolled { box-shadow: 0 8px 26px -18px rgba(15, 23, 42, 0.55); }
+
+        /* ② 打字机叙事 + 呼吸感光标 */
+        .tw-line { min-height: 22px; }
+        .tw-caret {
+            display: inline-block; width: 2px; height: 1em; margin-left: 3px;
+            border-radius: 2px; vertical-align: -0.12em; flex-shrink: 0;
+            background: linear-gradient(180deg, #22d3ee, #34d399);
+            animation: tw-breathe 1.15s ease-in-out infinite;
+        }
+        @keyframes tw-breathe {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.16; transform: scaleY(0.84); }
+        }
+
+        /* ③ 视差卡片渐入 fade-slide-up（IntersectionObserver 驱动） */
+        [data-reveal] { opacity: 1; }
+        [data-reveal="fade"] { --reveal-y: 0px; }
+        [data-reveal="up"] { --reveal-y: 20px; }
+        [data-reveal="up-lg"] { --reveal-y: 34px; }
+        html.js-anim [data-reveal]:not(.is-in):not(.rv-shown) {
+            opacity: 0;
+            transform: translate3d(0, var(--reveal-y, 20px), 0);
+        }
+        html.js-anim [data-reveal].is-in {
+            animation: reveal-up 0.62s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms) both;
+        }
+        @keyframes reveal-up {
+            from { opacity: 0; transform: translate3d(0, var(--reveal-y, 20px), 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        /* 小标题的渐变下划线随渐入展开 */
+        html.js-anim h2[data-reveal]::after {
+            content: ''; flex-basis: 100%; height: 2px; margin-top: 2px; border-radius: 2px;
+            background: linear-gradient(90deg, #22d3ee, #34d399);
+            transform: scaleX(0); transform-origin: 0 50%;
+            transition: transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
+        }
+        html.js-anim h2[data-reveal].is-in::after,
+        html.js-anim h2[data-reveal].rv-shown::after { transform: scaleX(1); }
+
+        /* 技能条随卡片进入视口再填充（同样具备降级） */
+        html.js-anim .skill-fill { transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms); }
+        html.js-anim .skill-fill:not(.is-in) { width: 0 !important; }
+
+        /* 背景光斑的鼠标 / 滚动视差 */
+        .glow-cyan, .glow-indigo {
+            will-change: transform;
+            transition: transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        /* ④ 彩带粒子画布 + 气泡反馈 */
+        #fxCanvas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; }
+        .fx-bubble {
+            position: fixed; z-index: 9999; pointer-events: none; white-space: nowrap;
+            padding: 7px 14px; border-radius: 9999px; font-size: 12px; font-weight: 600; color: #0f172a;
+            background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(6, 182, 212, 0.35);
+            box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.45);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            transform: translate(-50%, -50%);
+            animation: fx-bubble 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+        @keyframes fx-bubble {
+            0% { opacity: 0; transform: translate(-50%, -40%) scale(0.8); }
+            16% { opacity: 1; transform: translate(-50%, -80%) scale(1.05); }
+            30% { transform: translate(-50%, -88%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -195%) scale(0.95); }
+        }
+
+        /* 无障碍：降低动效偏好时强制全部可见 */
+        @media (prefers-reduced-motion: reduce) {
+            html.js-anim [data-reveal]:not(.is-in):not(.rv-shown) { opacity: 1 !important; transform: none !important; }
+            html.js-anim [data-reveal].is-in { animation: none !important; }
+            html.js-anim h2[data-reveal]::after { transform: scaleX(1) !important; transition: none !important; }
+            .tw-caret, .glow-cyan, .glow-indigo { animation: none !important; transition: none !important; }
+        }
+
+        /* Print */
+        @media print {
+            @page { size: A4; margin: 14mm 16mm; }
+            body { background: #fff !important; color: #18181b !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            .glass, .glass-blur { background: #fff !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-color: #e4e4e7 !important; }
+            .glass-sm { background: #fff !important; }
+            section { padding-top: 10px !important; padding-bottom: 10px !important; }
+            .page-wrap { max-width: 100% !important; padding: 0 !important; }
+            .tab-panel-print { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+            .tab-panel-print[aria-hidden="true"] { display: none !important; }
+            /* AI 证书标签页：打印时隐藏标签栏，4 个模块全部展开 */
+            #certTabs { display: none !important; }
+            #certPanels .cert-panel { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+            #certPanels .cert-panel + .cert-panel { margin-top: 20px; }
+            .glow-cyan, .glow-indigo { display: none !important; }
+            #scrollProgress, #fxCanvas, .fx-bubble, .tw-caret { display: none !important; }
+            [data-reveal] { opacity: 1 !important; transform: none !important; animation: none !important; }
+            h2[data-reveal]::after { display: none !important; }
+
+            /* 媒体与横向滚动区不上纸：音频/视频换成黑块，PPT 横滑条会被截断 */
+            audio, video, .ppt-track { display: none !important; }
+            /* 证书缩略图压成 6 列小图，24 张不再占好几页 */
+            .cert-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 5px !important; }
+            .cert-grid img { height: 62px !important; }
+            .cert-grid .cert-name { font-size: 8px !important; line-height: 1.3 !important; }
+            .cert-grid .cert-hint { display: none !important; }
+            .cert-grid .glass { padding: 4px !important; }
+            /* 小卡片与条目避免被拦腰截断；证书系列卡片允许跨页，否则整卡被推到下一页会留大片空白 */
+            .glass, .highlight-card, li { break-inside: avoid; page-break-inside: avoid; }
+            #certPanels .cert-panel > .glass { break-inside: auto; page-break-inside: auto; }
+            h2 { break-after: avoid; page-break-after: avoid; }
+            img { max-width: 100% !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><symbol id="i-badge-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3" /><path d="M16 2v3" /><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></symbol><symbol id="i-folder-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></symbol><symbol id="i-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></symbol><symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></symbol><symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></symbol><symbol id="i-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></symbol><symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></symbol><symbol id="i-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" /><rect x="6" y="14" width="12" height="8" rx="1" /></symbol><symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 4.933V21" /><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /><path d="M6 4.933V21" /><circle cx="12" cy="9" r="2" /></symbol><symbol id="i-sliders-horizontal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H3" /><path d="M12 19H3" /><path d="M14 3v4" /><path d="M16 17v4" /><path d="M21 12h-9" /><path d="M21 19h-5" /><path d="M21 5h-7" /><path d="M8 10v4" /><path d="M8 12H3" /></symbol><symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></symbol><symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></symbol><symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></symbol><symbol id="i-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" /><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></symbol><symbol id="i-check-circle-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></symbol><symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /><path d="M14 2v5a1 1 0 0 0 1 1h5" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></symbol><symbol id="i-images" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" /><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" /><circle cx="13" cy="7" r="1" fill="currentColor" /><rect x="8" y="2" width="14" height="14" rx="2" /></symbol><symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V3a1 1 0 0 0-1.28-.96l-10 2.917a1 1 0 0 0-.72.96V19" /><circle cx="18" cy="16" r="3" /><circle cx="6" cy="19" r="3" /></symbol><symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></symbol><symbol id="i-presentation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20" /><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" /><path d="m7 21 5-5 5 5" /></symbol><symbol id="i-gamepad-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11" /><line x1="8" x2="8" y1="9" y2="13" /><line x1="15" x2="15.01" y1="12" y2="12" /><line x1="18" x2="18.01" y1="10" y2="10" /><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" /></symbol><symbol id="i-code-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></symbol><symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></symbol><symbol id="i-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></symbol></svg>
+    <!-- Glow Blobs -->
+    <div class="glow-cyan"></div>
+    <div class="glow-indigo"></div>
+
+    <!-- 全局滚动进度条：固定屏幕最顶部，随下滑线性填充 -->
+    <div id="scrollProgress" class="no-print h-1 bg-gradient-to-r from-cyan-400 to-emerald-400" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="no-print nav-glass fixed top-0 left-0 right-0 z-50 h-14 flex items-center">
+        <div class="w-full max-w-5xl mx-auto px-6 flex items-center justify-between">
+            <span class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-500 flex items-center justify-center text-[11px] font-extrabold text-white">杨</span>
+                杨蕙名
+            </span>
+            <div class="flex items-center gap-2">
+                <button id="printBtn" class="btn-glow px-3 py-1.5 text-xs text-slate-900 hover:text-cyan-700 transition-all flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white/50" aria-label="打印">
+                    <svg class="ico w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-printer"></use></svg><span class="hidden sm:inline">打印</span>
+                </button>
+                <button id="copyWechatBtn" class="btn-glow px-3 py-1.5 text-xs text-slate-900 hover:text-cyan-700 transition-all flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white/50" aria-label="复制微信号">
+                    <svg class="ico w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-message-circle"></use></svg><span class="hidden sm:inline">复制微信</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-wrap relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-24 pb-16">
+
+        <!-- HERO -->
+        <section id="hero" class="pb-12">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-8">
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <!-- Avatar on the left of name -->
+                        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-cyan-500/30 relative flex-shrink-0 ring-2 ring-cyan-500/10 p-1 bg-white/70" id="avatarWrapper">
+                            <div class="w-full h-full rounded-full overflow-hidden" style="background:#228DDD">
+                                <img id="avatarImg" alt="头像" decoding="async" fetchpriority="high" class="w-full h-full object-contain" onerror="this.style.display='none';document.getElementById('avatarPlaceholder').style.display='flex';" />
+                                <div id="avatarPlaceholder" class="w-full h-full items-center justify-center text-xl font-bold text-white" style="display:none;">杨</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">杨蕙名</h1>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 font-medium">
+                                    <span class="relative w-1.5 h-1.5 ping-dot"><span class="block w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+                                    大一新生
+                                </span>
+                            </div>
+                            <p class="text-cyan-700 text-sm mt-1.5 flex items-center gap-2 font-medium">
+                                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-graduation-cap"></use></svg>
+                                江西理工大学 · 机械电子工程（2026 级）
+                            </p>
+                            <!-- 首屏打字机叙事：循环打出身份关键词 -->
+                            <div id="typeLine" class="tw-line mt-2 flex items-center gap-2" data-reveal="fade">
+                                <svg class="ico w-3.5 h-3.5 text-emerald-500/80 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg>
+                                <span id="typewriter" class="text-sm sm:text-[15px] font-bold gradient-text tracking-tight" aria-hidden="true"></span><span class="tw-caret" aria-hidden="true"></span>
+                                <span class="sr-only">数据分析探索者、全栈开发学习者、AI 应用实践者</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 max-w-2xl space-y-3 text-sm text-slate-900">
+                        <p class="text-[15px] font-semibold leading-relaxed">大家好！我是来自河南的大一新生，就读于江西理工大学机械电子工程专业。</p>
+                        <p class="leading-[1.9] border-l-2 border-cyan-500/50 pl-3">我热爱 AI 技术，已取得阿里云、华为云、科大讯飞、Datawhale 四大系列共 24 项 AI 认证；也擅长把 AI 用起来——用 AI 工具开发出《飞机大战》《坦克大战》两款网页游戏、生成 AI 音乐作品、制作精美 PPT，还与 AI 协作完成了本简历网站的开发部署。</p>
+                        <p class="leading-relaxed text-slate-700">在校期间我积极参加竞赛锻炼综合能力，获第五届校职业规划大赛院级二等奖、主题演讲比赛二等奖。希望与志同道合的伙伴一起成长，把 AI 用到更多学习与创作场景中。</p>
+                        <div class="flex items-center gap-2.5 flex-wrap pt-1">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-cyan-500/25 text-xs font-medium text-slate-900">
+                                <svg class="ico w-3.5 h-3.5 text-cyan-600" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> 电话：19838237532
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-emerald-500/25 text-xs font-medium text-slate-900">
+                                <svg class="ico w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-message-circle"></use></svg> 微信：Y47311942717
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-sky-500/25 text-xs font-medium text-slate-900">
+                                <svg class="ico w-3.5 h-3.5 text-sky-600" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg> QQ：3238233840
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 flex-wrap no-print">
+                        <div class="flex items-center gap-2">
+                            <button class="btn-glow inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-slate-900 bg-white/60 border border-slate-200 rounded-lg hover:text-cyan-700 transition-all" id="printBtn2">
+                                <svg class="ico w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-printer"></use></svg> 打印简历
+                            </button>
+                        </div>
+                        <button id="helloBtn" class="btn-glow inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-emerald-500 border border-transparent rounded-lg hover:brightness-105 transition-all">
+                            <svg class="ico w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-hand"></use></svg> 打个招呼
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- HIGHLIGHTS -->
+        <section id="highlights" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg> 亮点成果
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4" id="highlightsGrid"></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- AI CERTIFICATIONS -->
+        <section id="certifications" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-badge-check"></use></svg> AI 认证证书
+            </h2>
+            <div id="aiCertGrid">
+                <div id="aiCertSummary" class="mb-5"></div>
+                <div class="border-b border-slate-200 flex gap-4 sm:gap-6 mb-8 no-print overflow-x-auto cert-tabs" id="certTabs" role="tablist" aria-label="AI 认证证书系列" aria-orientation="horizontal"></div>
+                <div id="certPanels"></div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- CAMPUS EXPERIENCE -->
+        <section id="experience" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg> 校园经历
+            </h2>
+            <div class="border-b border-slate-200 flex gap-4 sm:gap-6 mb-8 no-print overflow-x-auto" id="expTabs" role="tablist"></div>
+            <div id="expPanels"></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-folder-open"></use></svg> 项目
+            </h2>
+            <div class="border-b border-slate-200 flex gap-4 sm:gap-6 mb-8 no-print overflow-x-auto" id="projTabs" role="tablist"></div>
+            <div id="projPanels"></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- SKILLS -->
+        <section id="skills" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-sliders-horizontal"></use></svg> 技能
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6" id="skillsGrid"></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- EDUCATION & AWARDS -->
+        <section id="education" class="py-12">
+            <h2 class="text-xs font-semibold text-cyan-700 uppercase tracking-[0.2em] mb-8 flex flex-wrap items-center gap-2" data-reveal="fade">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-graduation-cap"></use></svg> 教育与证书
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass p-6 card-hover" id="eduCard" data-reveal="up"></div>
+                <div class="glass p-6 card-hover" id="awardsCard" data-reveal="up"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" class="toast-msg" role="status"></div>
+
+    <!-- Modal -->
+    <div class="fixed inset-0 bg-black/40 z-[9999] hidden items-center justify-center p-6 backdrop-blur-md" id="certModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+            <button class="hidden absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-lg items-center justify-center text-slate-900" id="modalPrev" aria-label="上一张">
+                <svg class="ico w-5 h-5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chevron-left"></use></svg>
+            </button>
+            <button class="hidden absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-lg items-center justify-center text-slate-900" id="modalNext" aria-label="下一张">
+                <svg class="ico w-5 h-5" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chevron-right"></use></svg>
+            </button>
+        <div class="bg-white max-w-[95vw] max-h-[94vh] w-[95vw] h-[94vh] rounded-xl border border-slate-200 p-4 relative flex flex-col shadow-xl">
+            <button class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-900 hover:text-slate-900 transition-colors" id="modalClose" aria-label="关闭">
+                <svg class="ico w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg>
+            </button>
+            <div class="text-xs text-slate-900 text-center py-2 border-b border-slate-100 mb-2" id="modalTitle">证书查看</div>
+            <div class="flex-1 min-h-0 flex items-center justify-center overflow-auto" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 游戏/在线体验不再用页内 iframe 层嵌入：iframe 导航会被浏览器记成独立的历史步骤，
+         点返回时可能"退回"到上一次打开的游戏页；改为当前标签页直接跳转，返回键一次一步 -->
+
+    <!-- 交互反馈粒子画布（原生 Canvas，零依赖） -->
+    <canvas id="fxCanvas" class="no-print" aria-hidden="true"></canvas>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ======================== DATA ========================
+        const resume = {
+            name: '杨蕙名',
+            title: '江西理工大学 · 机械电子工程（2026 级）',
+            avatar: 'avatar.webp',
+            bio: '大家好！我是来自河南的大一新生，就读于江西理工大学机械电子工程专业。我热爱 AI 技术，已取得阿里云、华为云、科大讯飞、Datawhale 四大系列共 24 项 AI 认证；也擅长把 AI 用起来——用 AI 工具开发出《飞机大战》《坦克大战》两款网页游戏、生成 AI 音乐作品、制作精美 PPT，还与 AI 协作完成了本简历网站的开发部署。在校期间我积极参加竞赛锻炼综合能力，获第五届校职业规划大赛院级二等奖、主题演讲比赛二等奖。希望与志同道合的伙伴一起成长，把 AI 用到更多学习与创作场景中。',
+            location: '河南省',
+            contact: { phone: '19838237532', wechat: 'Y47311942717', qq: '3238233840' },
+            highlights: [
+                { icon: 'badge-check', title: '24 项 AI 系列认证', desc: '阿里云、华为云、科大讯飞、互联网大厂四大系列', metric: '24 项' },
+                { icon: 'award', title: '校园竞赛 2 项获奖', desc: '职业规划大赛院级二等奖、主题演讲比赛二等奖', metric: '2 项' },
+                { icon: 'gamepad-2', title: 'AI 做游戏 2 款上线', desc: '飞机大战、坦克大战部署 GitHub Pages', metric: '2 款' },
+                { icon: 'music', title: 'AI 生成音乐作品', desc: 'AI 工具完成旋律编曲混音，可在线试听', metric: '1 首' },
+                { icon: 'code-2', title: 'AI 协作开发简历网站', desc: '本站由 AI 辅助编码完成并部署上线', metric: '已上线' },
+            ],
+            experience: [{
+                id: 'zhiye', label: '职业规划大赛', mode: 'cards',
+                items: [{
+                    title: '第五届江西理工大学大学生职业规划大赛院级选拔赛',
+                    stack: ['职业规划', '生涯路径设计', '作品撰写'],
+                    desc: '参加第五届江西理工大学大学生职业规划大赛院级选拔赛：结合机械电子工程专业方向完成职业规划作品，梳理自我认知与专业能力优势，明确大学阶段的学业目标、技能路线与长期职业方向，按要求提交参赛材料参与院级评比。',
+                    result: '荣获院级选拔赛二等奖（机电工程学院、电气工程与自动化学院，2026年10月28日）。',
+                    cert: 'cert_career.webp', certType: 'image', certName: '职业规划大赛院级选拔赛二等奖荣誉证书'
+                }]
+            }, {
+                id: 'speech', label: '演讲比赛', mode: 'cards',
+                items: [{
+                    title: '江西理工大学机电工程学院“石榴花开心向党，同心共筑中国梦”主题演讲比赛',
+                    stack: ['主题演讲', '稿件撰写', '舞台表达'],
+                    desc: '参加江西理工大学机电工程学院 2026-2027 学年“石榴花开心向党，同心共筑中国梦”主题演讲比赛：围绕主题自主完成演讲稿选题与撰写，反复打磨稿件并练习舞台表达，主动报名参赛并完成现场演讲，讲述青春向党、同心筑梦的故事。',
+                    result: '表现突出，荣获演讲比赛二等奖（共青团江西理工大学机电工程学院委员会颁发，2026年9月）。',
+                    cert: 'img_29.webp', certType: 'image', certName: '演讲比赛二等奖荣誉证书'
+                }]
+            }],
+            projects: [{
+                id: 'jinxiushiqiu', label: '锦绣诗球',
+                items: [{
+                    title: '国庆·锦绣诗球 3D 爱国诗词网页（AI 辅助开发）',
+                    stack: ['AI 辅助编程', 'Three.js / WebGL', '网页交互'],
+                    desc: '借助 AI 编程工具从零完成的国庆主题 3D 交互网页《锦绣诗球》：以 1949 颗星辰铺展成一颗可旋转的立体诗词球，收录 77 句爱国诗词。由 AI 辅助生成 3D 球体排布、拖拽旋转、滚轮/双指缩放、双击查看诗句详情等核心交互代码，本人负责需求描述、内容整理、调试与细节打磨；适配电脑端与手机端，高清流畅省电。项目已部署到 GitHub Pages，打开链接即可直接体验。',
+                    result: '网页已成功上线，支持电脑与手机浏览器直接在线体验。',
+                    image: 'img_28.webp', imageAlt: '锦绣诗球网页效果截图', imageTitle: '效果预览', imageIcon: 'presentation',
+                    link: 'https://yhm-123456.github.io/jinxiushiqiu/', linkText: '点击在线体验'
+                }]
+            }, {
+                id: 'aigame', label: 'AI 做游戏',
+                items: [{
+                    title: '飞机大战网页小游戏（AI 辅助开发）',
+                    stack: ['AI 辅助编程', 'HTML5 Canvas', '网页游戏'],
+                    desc: '借助 AI 编程工具从零完成网页版《飞机大战》小游戏：由 AI 辅助生成玩家/敌机、子弹碰撞、计分系统等核心代码，本人负责需求描述、调试与细节打磨；适配电脑端与手机端。游戏已部署到 GitHub Pages，打开链接即可直接游玩。',
+                    result: '游戏已成功上线，支持电脑与手机浏览器直接游玩。',
+                    image: 'img_30.webp', imageAlt: '飞机大战网页游戏实机截图', imageTitle: '游戏实机预览', imageIcon: 'gamepad-2',
+                    link: 'https://yhm-123456.github.io/feijidazhanyhm/', linkText: '点击在线试玩'
+                }, {
+                    title: '坦克大战网页小游戏（AI 辅助开发）',
+                    stack: ['AI 辅助编程', 'HTML5 Canvas', '网页游戏'],
+                    desc: '借助 AI 编程工具从零完成经典网页版《坦克大战》：由 AI 辅助生成地图关卡、敌我坦克对战、子弹碰撞与胜负判定等核心代码，本人负责需求描述、调试与细节打磨；支持键盘与触屏操作，适配电脑端与手机端，并配备背景音乐与横屏适配。游戏已部署到 GitHub Pages，打开链接即可直接游玩。',
+                    result: '游戏已成功上线，支持电脑与手机浏览器直接游玩。',
+                    image: 'img_31.webp', imageAlt: '坦克大战网页游戏实机截图', imageTitle: '游戏实机预览', imageIcon: 'gamepad-2',
+                    link: 'https://yhm-123456.github.io/tankedazhan/', linkText: '点击在线试玩'
+                }]
+            }, {
+                id: 'aicode', label: 'AI 写代码',
+                items: [{
+                    title: 'AI 辅助编写个人简历网站',
+                    stack: ['AI 编程', 'HTML / CSS / JS', '网页开发'],
+                    desc: '借助 AI 编程工具完成个人简历网站的开发：由 AI 辅助生成与修改前端代码，本人负责提出需求、验收效果与打磨细节，覆盖页面布局、证书展示、交互弹窗与多端适配等功能。下图为开发过程中 AI 运行与修改代码的真实截图。',
+                    result: '简历网站已完成并成功部署上线，掌握了与 AI 协作开发的完整流程。',
+                    image: 'img_03.webp', imageAlt: 'AI 运行代码开发简历网站截图'
+                }]
+            }, {
+                id: 'aimusic', label: 'AI 制音乐',
+                items: [{
+                    title: 'AI 生成音乐作品',
+                    stack: ['AI 音乐生成', '提示词创作', '音频成品'],
+                    desc: '借助 AI 音乐生成工具创作的音乐作品：通过编写风格描述与情绪提示词，由 AI 完成旋律、编曲与混音，本人负责构思主题、挑选版本与细节调整，点击下方播放器即可试听。',
+                    result: '作品已生成完毕，支持在线试听与循环播放（时长 3 分 55 秒）。',
+                    audio: [
+                        { src: 'music.m4a', type: 'audio/mp4' },
+                        { src: 'music.mp3', type: 'audio/mpeg' }
+                    ]
+                }]
+            }, {
+                id: 'aippt', label: 'AI 做 PPT',
+                items: [{
+                    title: '红旗渠主题演示文稿（AI 辅助制作）',
+                    stack: ['AI 辅助设计', 'PowerPoint / WPS', '内容策划'],
+                    desc: '借助 AI 工具制作的主题演示文稿《红旗渠·太行绝壁上的人与自然交响曲》：由 AI 辅助梳理内容大纲、生成文案与配图建议，本人负责主题策划、版式设计与细节打磨，共 12 页。下方已将每页转为图片，手机、电脑、微信都能直接翻阅（左右滑动，点击可全屏放大）。',
+                    result: 'PPT 已制作完成，支持在各端（含手机微信）直接在线预览全文。',
+                    slides: ['slide_01.webp','slide_02.webp','slide_03.webp','slide_04.webp','slide_05.webp','slide_06.webp','slide_07.webp','slide_08.webp','slide_09.webp','slide_10.webp','slide_11.webp','slide_12.webp'],
+                    slidesTitle: '红旗渠主题 PPT',
+                    link: 'ppt_hongqiqu.pdf', linkText: '下载完整 PPT（PDF 版）'
+                }]
+            }],
+            skills: [
+                { label: '英语能力（听说读写）', level: 82 },
+                { label: '办公软件（Word / Excel / PPT）', level: 80 },
+                { label: '人工智能基础（数据标注 / 模型评估）', level: 78 },
+                { label: '沟通与表达（知识传递 / 讲解）', level: 85 },
+            ],
+            education: {
+                school: '江西理工大学', major: '机械电子工程专业 本科（2026 级）', period: '2026.09 – 2030.06',
+                courses: ['高等数学', '大学英语', '机械制图', '电路基础', '计算机基础'],
+                extra: '课余自学 AI 应用知识，已累计取得 24 项 AI 相关认证；在校期间积极参加竞赛，获第五届校职业规划大赛院级二等奖、主题演讲比赛二等奖'
+            },
+            awards: [
+                '第五届江西理工大学大学生职业规划大赛 院级选拔赛二等奖（机电工程学院、电气工程与自动化学院，2026年10月28日）',
+                '阿里云 AI 系列 6 项认证：RAG 应用构建 / 百炼平台智能体应用 / VISION AI 设计（进阶）/ 大模型内容生产 / AIGC 设计 / 人工智能训练师（2026年）',
+                '华为云 AI 系列 6 项微认证：人工智能初识 / 语音识别计算器 / AI Agent 扑克对战 / YOLOv8 目标检测 / CodeArts / AI 海报（2026年）',
+                '科大讯飞 AI大学堂 4 项工程师认证：Prompt / 智能体 / 微调 / RAG 工程师（2026年）',
+                'Datawhale AI 系列 8 项认证：豆包 MarsCode、蚂蚁集团、科大讯飞、ModelScope 魔搭等联合认证（2026年）',
+                '江西理工大学机电工程学院“石榴花开心向党，同心共筑中国梦”主题演讲比赛 二等奖（院级，2026年9月）'
+            ],
+            personal: [
+                '学习主动性强，高中期间在完成课业之余，坚持拓展英语应用能力和前沿技术知识，善于制定计划并自我监督执行',
+                '性格踏实、细致，乐于助人，在日常学习中能耐心解答他人疑问，具备良好的团队协作与沟通意识',
+                '目标明确：大学期间计划加入机器人或电子设计类社团，从基础技能学起，逐步积累工程实践经验，为未来进入智能制造或 AI 应用领域打牢根基'
+            ],
+            aiCerts: [{
+                group: '阿里云 AI 系列证书',
+                shortLabel: '阿里云',
+                icon: 'cloud',
+                cols: 'grid-cols-2 sm:grid-cols-3',
+                stack: ['大模型 Clouder', '百炼智能体应用', 'VISION AI 设计', 'AIGC 设计', 'AI 训练师'],
+                desc: '在阿里云官方认证平台完成 6 项专项认证，涵盖大模型 RAG 应用构建及优化、基于百炼平台构建智能体应用、利用大模型提升内容生产能力、VISION 人工智能设计（进阶）、基于 PAI ArtLab 的 AIGC 设计基础，以及达摩院人工智能训练师（高级）课程。',
+                result: '共获得 6 项阿里云 Apsara Clouder / 人工智能训练师认证（2026年）。',
+                items: [
+                    { file: 'img_04.webp', name: '大模型Clouder认证：RAG应用构建及优化' },
+                    { file: 'img_05.webp', name: '人工智能Clouder认证：VISION人工智能设计（进阶）' },
+                    { file: 'img_06.webp', name: '人工智能训练师证书（高级）· 达摩院' },
+                    { file: 'img_07.webp', name: '大模型Clouder认证：利用大模型提升内容生产能力' },
+                    { file: 'img_08.webp', name: '基于PAI ArtLab的AIGC设计基础' },
+                    { file: 'img_09.webp', name: '大模型Clouder认证：基于百炼平台构建智能体应用' },
+                ]
+            }, {
+                group: '华为云 AI 系列证书',
+                shortLabel: '华为云',
+                icon: 'cloud',
+                cols: 'grid-cols-2 sm:grid-cols-3',
+                stack: ['华为云微认证', 'YOLOv8', 'AI Agent', '昇腾云服务'],
+                desc: '在华为云官方平台完成 6 项微认证，涵盖人工智能初识、AI 智能语音识别计算器、基于 AI Agent 的人机扑克对战、昇腾云服务训练 YOLOv8 目标检测、CodeArts 编码实战与 AI 企业风格海报打造。',
+                result: '共获得 6 项华为云微认证（2026年）。',
+                items: [
+                    { file: 'img_10.webp', name: '人工智能初识微认证 · Huawei Certification' },
+                    { file: 'img_11.webp', name: 'AI智能语音识别计算器 · 华为云微认证' },
+                    { file: 'img_12.webp', name: '基于AI Agent实现人机AI扑克对战 · 华为云微认证' },
+                    { file: 'img_13.webp', name: '昇腾云服务训练YOLOv8目标检测 · 华为云微认证' },
+                    { file: 'img_14.webp', name: '华为云码道CodeArts实战速成 · 华为云微认证' },
+                    { file: 'img_15.webp', name: 'AI打造专属企业风格海报 · 华为云微认证' },
+                ]
+            }, {
+                group: '科大讯飞 AI 系列证书',
+                shortLabel: '科大讯飞',
+                icon: 'sparkles',
+                stack: ['Prompt 工程师', '智能体工程师', '微调工程师', 'RAG 工程师'],
+                desc: '在科大讯飞 AI大学堂系统完成 4 项核心工程师认证，覆盖大模型 Prompt 设计、AI 智能体搭建、模型微调与 RAG 检索增强生成，形成完整的大模型应用技能链。',
+                result: '共获得 4 项科大讯飞 AI大学堂工程师认证（2026年）。',
+                items: [
+                    { file: 'img_16.webp', name: 'Prompt工程师认证' },
+                    { file: 'img_17.webp', name: '智能体工程师认证' },
+                    { file: 'img_18.webp', name: '微调工程师认证' },
+                    { file: 'img_19.webp', name: 'RAG工程师认证' },
+                ]
+            }, {
+                group: 'Datawhale & 互联网大厂 AI 系列证书',
+                shortLabel: 'Datawhale & 大厂',
+                icon: 'waves',
+                stack: ['豆包 MarsCode', '蚂蚁集团', '科大讯飞', 'Datawhale'],
+                desc: '参加 Datawhale 联合豆包 MarsCode、蚂蚁集团、科大讯飞、ModelScope 魔搭、趋动云、浪潮信息、商汤等互联网大厂组织的 8 项联合认证，覆盖 Prompt、微调、智能体、大模型开发、AI+编程与 AI+数据分析等方向。',
+                result: '共获得 8 项互联网大厂联合认证（2026年）。',
+                items: [
+                    { file: 'img_20.webp', name: 'AI+编程能力认证 · 豆包MarsCode × Datawhale' },
+                    { file: 'img_21.webp', name: 'Agent Engineer · 蚂蚁集团百宝箱 × Datawhale' },
+                    { file: 'img_22.webp', name: 'Prompt Engineer · 讯飞星火 × Datawhale' },
+                    { file: 'img_23.webp', name: 'Fine-tuning Engineer · 讯飞星辰 × Datawhale' },
+                    { file: 'img_24.webp', name: 'Agent Engineer · ModelScope魔搭 × Datawhale' },
+                    { file: 'img_25.webp', name: 'LLM Engineer · 趋动云 × Datawhale' },
+                    { file: 'img_26.webp', name: '大模型开发工程师 · 浪潮信息 × Datawhale' },
+                    { file: 'img_27.webp', name: 'AI+数据分析能力认证 · 商汤 × Datawhale' },
+                ]
+            }]
+        };
+
+        // ======================== UTILS ========================
+        const $ = (s, c = document) => c.querySelector(s);
+        const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+        const icon = (name, cls = 'w-4 h-4') =>
+            `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-${name}"></use></svg>`;
+
+        // ======================== TOAST ========================
+        const toastEl = $('#toast');
+        let toastTimer = null;
+        function showToast(msg) {
+            if (toastTimer) clearTimeout(toastTimer);
+            toastEl.textContent = msg;
+            toastEl.classList.add('show');
+            toastTimer = setTimeout(() => { toastEl.classList.remove('show'); toastTimer = null; }, 2200);
+        }
+
+        // ======================== AVATAR ========================
+        const avatarImg = $('#avatarImg'), avatarPlaceholder = $('#avatarPlaceholder');
+        function initAvatar() {
+            if (resume.avatar && resume.avatar.trim()) {
+                avatarImg.src = resume.avatar; avatarImg.style.display = 'block'; avatarPlaceholder.style.display = 'none';
+            } else { avatarImg.style.display = 'none'; avatarPlaceholder.style.display = 'flex'; }
+        }
+        // 头像固定展示，禁止任何访客点击更换
+
+        // ======================== MODAL ========================
+        const modal = $('#certModal'), modalBody = $('#modalBody'), modalTitle = $('#modalTitle'), modalClose = $('#modalClose');
+        const modalPrev = $('#modalPrev'), modalNext = $('#modalNext');
+        let certViewerList = null, certViewerIdx = 0;
+        let lastFocusedEl = null;
+        function showCertAt(idx) {
+            certViewerIdx = (idx + certViewerList.length) % certViewerList.length;
+            const c = certViewerList[certViewerIdx];
+            modalTitle.textContent = `${c.group ? c.group + ' · ' : ''}${c.name}（${certViewerIdx + 1} / ${certViewerList.length}）`;
+            modalBody.innerHTML = `<img src="${c.file}" decoding="async" alt="${c.name}" style="max-width:100%;max-height:100%;object-fit:contain;" />`;
+        }
+        function setNavVisible(on) { modalPrev.classList.toggle('hidden', !on); modalNext.classList.toggle('hidden', !on); }
+        // 打开弹窗：记住来源焦点 → 显示 → 把焦点移进弹窗（读屏与键盘用户不会留在背景页）
+        function showModalLayer() {
+            lastFocusedEl = document.activeElement;
+            modal.classList.remove('hidden'); modal.classList.add('flex');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            modalClose.focus({ preventScroll: true });
+            pushLayer('modal');
+        }
+        function openCertViewer(list, idx) {
+            certViewerList = list;
+            setNavVisible(list.length > 1);
+            showCertAt(idx);
+            showModalLayer();
+        }
+        function closeModal() {
+            modal.classList.add('hidden'); modal.classList.remove('flex');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (lastFocusedEl && document.contains(lastFocusedEl)) {
+                try { lastFocusedEl.focus({ preventScroll: true }); } catch (e) {}
+            }
+            lastFocusedEl = null;
+        }
+        modal.addEventListener('click', e => { if (e.target === modal || modalClose.contains(e.target)) requestCloseLayer(); });
+        modalPrev.addEventListener('click', e => { e.stopPropagation(); if (certViewerList) showCertAt(certViewerIdx - 1); });
+        modalNext.addEventListener('click', e => { e.stopPropagation(); if (certViewerList) showCertAt(certViewerIdx + 1); });
+        document.addEventListener('keydown', e => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') { requestCloseLayer(); return; }
+            if (e.key === 'Tab') {                       // 焦点约束：Tab / Shift+Tab 在弹窗内循环
+                const items = $$('button:not(.hidden), a[href], [tabindex]:not([tabindex="-1"])', modal)
+                    .filter(el => el.offsetParent !== null);
+                if (!items.length) return;
+                const first = items[0], last = items[items.length - 1];
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+                return;
+            }
+            if (e.key === 'ArrowLeft' && certViewerList) showCertAt(certViewerIdx - 1);
+            else if (e.key === 'ArrowRight' && certViewerList) showCertAt(certViewerIdx + 1);
+        });
+
+        // ======================== 返回键分层退出（图片弹窗） ========================
+        // 每打开一层就压入一条历史记录；手机按返回键时浏览器先回退该条记录，
+        // 我们据此只关闭最上层 UI；所有层关完后，返回键才恢复"退出网站"的默认行为。
+        const layerStack = [];
+        function pushLayer(name) {
+            let pushed = true;
+            try { history.pushState({ qLayer: name }, ''); } catch (e) { pushed = false; }
+            layerStack.push({ name: name, pushed: pushed });
+        }
+        function requestCloseLayer() {
+            if (!layerStack.length) return;
+            const top = layerStack[layerStack.length - 1];
+            if (top.pushed) { try { history.back(); return; } catch (e) { /* 回退失败则直接关层 */ } }
+            layerStack.pop(); closeLayerByName(top.name);
+        }
+        function closeLayerByName(name) {
+            if (name === 'modal') closeModal();
+        }
+        window.addEventListener('popstate', () => {
+            if (!layerStack.length) return;   // 无层：交给浏览器正常退出网站
+            closeLayerByName(layerStack.pop().name);
+        });
+
+        // ======================== 游戏 / 在线体验：当前标签页直接跳转 ========================
+        // 不用页内 iframe 层：浏览器会把 iframe 的加载/替换记成自己的历史步骤，
+        // 点返回还原这些步骤时又会回到之前打开的游戏/3D 网站页。
+        // 直接跳转后历史链条清晰：游戏页 → 简历页 → 上一页，返回键/返回箭头一次一步。
+        // 跳转前把滚动位置与当前子标签记入 sessionStorage，返回重新加载后精确恢复到点击前的位置。
+        const lastActive = {};
+        function openInThisTab(url) {
+            try {
+                sessionStorage.setItem('backCtx', JSON.stringify({
+                    y: window.scrollY || document.documentElement.scrollTop || 0,
+                    proj: lastActive.projTabs || '', exp: lastActive.expTabs || '',
+                    t: Date.now()
+                }));
+            } catch (e) {}
+            window.location.href = url;
+        }
+
+        // ======================== FX 动效引擎（纯原生 JS：进度条 / 打字机 / 渐入 / 粒子） ========================
+        const FX = (function () {
+            const root = document.documentElement;
+            const reduceMQ = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+            const reduce = !!(reduceMQ && reduceMQ.matches);
+            const finePointer = window.matchMedia ? window.matchMedia('(pointer: fine)').matches : false;
+
+            const progressEl = $('#scrollProgress');
+            const navEl = document.querySelector('nav');
+            const glowA = $('.glow-cyan'), glowB = $('.glow-indigo');
+            const canvas = $('#fxCanvas');
+            const ctx = (canvas && canvas.getContext) ? canvas.getContext('2d') : null;
+
+            /* ---------- ① 滚动进度条 + 背景视差：单条 rAF 流水线，只写 transform ---------- */
+            let sy = 0, mx = 0, my = 0, queued = false, navOn = false;
+            function paint() {
+                queued = false;
+                const max = (root.scrollHeight - root.clientHeight) || 0;
+                const p = max > 0 ? Math.min(1, Math.max(0, sy / max)) : 0;
+                if (progressEl) progressEl.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+                if (navEl) {
+                    const on = sy > 10;
+                    if (on !== navOn) { navOn = on; navEl.classList.toggle('nav-scrolled', on); }
+                }
+                if (finePointer && !reduce) {
+                    const dy = sy * 0.05;
+                    if (glowA) glowA.style.transform = 'translate3d(' + (mx * 44).toFixed(1) + 'px,' + (my * 34 + dy).toFixed(1) + 'px,0)';
+                    if (glowB) glowB.style.transform = 'translate3d(' + (mx * -50).toFixed(1) + 'px,' + (my * -40 - dy).toFixed(1) + 'px,0)';
+                }
+            }
+            function queue() { if (!queued) { queued = true; requestAnimationFrame(paint); } }
+            function onScroll() { sy = window.pageYOffset || root.scrollTop || 0; queue(); }
+
+            /* ---------- ② 首屏打字机叙事 ---------- */
+            const WORDS = ['数据分析探索者', '全栈开发学习者', 'AI 应用实践者'];
+            let twEl = null, twTimer = null, twIdx = 0, twChar = 0, twDel = false, twPaused = false;
+            function twTick() {
+                if (!twEl || twPaused) return;
+                const w = WORDS[twIdx];
+                if (!twDel) {
+                    twChar++;
+                    twEl.textContent = w.slice(0, twChar);
+                    if (twChar >= w.length) { twDel = true; twTimer = setTimeout(twTick, 1500); return; }
+                    twTimer = setTimeout(twTick, 118 + Math.random() * 62);
+                } else {
+                    if (twChar <= 0) { twDel = false; twIdx = (twIdx + 1) % WORDS.length; twTimer = setTimeout(twTick, 300); return; }
+                    twChar--;
+                    twEl.textContent = w.slice(0, twChar);
+                    if (twChar <= 0) { twDel = false; twIdx = (twIdx + 1) % WORDS.length; twTimer = setTimeout(twTick, 300); return; }
+                    twTimer = setTimeout(twTick, 52);
+                }
+            }
+            function initTypewriter() {
+                twEl = $('#typewriter');
+                if (!twEl) return;
+                if (reduce) { twEl.textContent = WORDS.join(' · '); return; }
+                twEl.textContent = WORDS[0];                 // 首屏立即有内容，零等待
+                twChar = WORDS[0].length; twDel = true;
+                twTimer = setTimeout(twTick, 1100);
+            }
+            function twPause(fullText) {
+                twPaused = true;
+                if (twTimer) { clearTimeout(twTimer); twTimer = null; }
+                if (fullText && twEl) twEl.textContent = WORDS.join(' · ');
+            }
+            function twResume() {
+                if (!twEl || reduce || !twPaused) return;
+                twPaused = false;
+                if (twChar <= 0) { twDel = false; twChar = 0; }
+                twEl.textContent = WORDS[twIdx].slice(0, twChar);
+                twTimer = setTimeout(twTick, 420);
+            }
+
+            /* ---------- ③ 视差卡片渐入：IntersectionObserver ---------- */
+            let io = null;
+            function finish(el) {                            // 动画结束后交还给 hover 过渡，避免相互覆盖
+                el.classList.remove('is-in');
+                el.classList.add('rv-shown');
+            }
+            function mark(el) {
+                if (el.classList.contains('is-in') || el.classList.contains('rv-shown')) return;
+                el.classList.add('is-in');
+                const fills = el.querySelectorAll('.skill-fill');
+                for (let i = 0; i < fills.length; i++) fills[i].classList.add('is-in');
+                const d = parseInt(el.style.getPropertyValue('--reveal-delay'), 10) || 0;
+                setTimeout(function () { finish(el); }, d + 800);
+            }
+            function delayOf(el) {                           // 同一容器内按顺序阶梯延迟
+                const p = el.parentElement;
+                if (!p) return 0;
+                let order = 0;
+                const kids = p.children;
+                for (let k = 0; k < kids.length; k++) {
+                    if (kids[k] === el) break;
+                    if (kids[k].hasAttribute && kids[k].hasAttribute('data-reveal')) order++;
+                }
+                return Math.min(order, 6) * 70;
+            }
+            function observe(scope) {
+                if (!io) return;
+                const list = (scope || document).querySelectorAll('[data-reveal]:not(.is-in):not(.rv-shown)');
+                for (let i = 0; i < list.length; i++) {
+                    const el = list[i];
+                    if (!el.style.getPropertyValue('--reveal-delay')) el.style.setProperty('--reveal-delay', delayOf(el) + 'ms');
+                    io.observe(el);
+                }
+            }
+            function revealAll() {                           // 兜底 / 打印前：立即全部显示
+                const list = document.querySelectorAll('[data-reveal]:not(.rv-shown)');
+                for (let i = 0; i < list.length; i++) { list[i].classList.remove('is-in'); list[i].classList.add('rv-shown'); }
+                const fills = document.querySelectorAll('.skill-fill:not(.is-in)');
+                for (let j = 0; j < fills.length; j++) fills[j].classList.add('is-in');
+                if (io) { io.disconnect(); io = null; }
+            }
+            function initReveal() {
+                if (reduce || !('IntersectionObserver' in window)) return;   // 降级：保持默认可见
+                try {
+                    root.classList.add('js-anim');
+                    io = new IntersectionObserver(function (entries) {
+                        for (let i = 0; i < entries.length; i++) {
+                            if (entries[i].isIntersecting && io) { mark(entries[i].target); io.unobserve(entries[i].target); }
+                        }
+                    }, { threshold: 0.01, rootMargin: '0px 0px -4% 0px' });
+                    observe(document);
+                    setTimeout(function () {                 // 首屏兜底：已在视口内却未触发的元素直接显示
+                        const vh = window.innerHeight;
+                        const list = document.querySelectorAll('[data-reveal]:not(.is-in):not(.rv-shown)');
+                        for (let i = 0; i < list.length; i++) {
+                            const r = list[i].getBoundingClientRect();
+                            if (r.top < vh && r.bottom > 0) mark(list[i]);
+                        }
+                    }, 1200);
+                } catch (err) {
+                    root.classList.remove('js-anim');        // 任何异常立即回到全可见状态，绝不白屏
+                    revealAll();
+                }
+            }
+
+            /* ---------- ④ 彩带粒子 Confetti（原生 Canvas）+ 气泡反馈 ---------- */
+            const COLORS = ['#22d3ee', '#34d399', '#818cf8', '#fbbf24', '#f472b6', '#60a5fa'];
+            let parts = [], raf = 0, W = 0, H = 0;
+            function sizeCanvas() {
+                if (!canvas || !ctx) return;
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                W = window.innerWidth; H = window.innerHeight;
+                canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+                canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            function loop() {
+                raf = 0;
+                if (!ctx) return;
+                ctx.clearRect(0, 0, W, H);
+                for (let i = parts.length - 1; i >= 0; i--) {
+                    const p = parts[i];
+                    p.life++;
+                    p.vy += p.g; p.vx *= 0.988; p.vy *= 0.994;
+                    p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+                    const t = p.life / p.ttl;
+                    if (t >= 1 || p.y > H + 60) { parts.splice(i, 1); continue; }
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(0, 1 - t * t);
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot);
+                    ctx.fillStyle = p.c;
+                    if (p.round) { ctx.beginPath(); ctx.arc(0, 0, p.r, 0, 6.2832); ctx.fill(); }
+                    else ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                }
+                if (parts.length) raf = requestAnimationFrame(loop);
+                else ctx.clearRect(0, 0, W, H);
+            }
+            function burst(x, y, count) {
+                if (!ctx || reduce) return;
+                const n = count || (W < 640 ? 46 : 84);      // 移动端自动降载，保证 60fps
+                for (let i = 0; i < n; i++) {
+                    const a = Math.random() * 6.2832;
+                    const sp = 2.4 + Math.random() * 6.6;
+                    parts.push({
+                        x: x, y: y,
+                        vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 3.2 - Math.random() * 2.4,
+                        g: 0.17 + Math.random() * 0.07,
+                        w: 4 + Math.random() * 6, h: 3 + Math.random() * 5, r: 1.6 + Math.random() * 2.2,
+                        rot: Math.random() * 6.2832, vr: (Math.random() - 0.5) * 0.34,
+                        life: 0, ttl: 58 + Math.random() * 34,
+                        c: COLORS[(Math.random() * COLORS.length) | 0], round: Math.random() < 0.3
+                    });
+                }
+                if (parts.length > 460) parts.splice(0, parts.length - 460);
+                if (!raf) raf = requestAnimationFrame(loop);
+            }
+            function bubble(x, y, text) {
+                const b = document.createElement('div');
+                b.className = 'fx-bubble no-print';
+                b.textContent = text;
+                b.style.visibility = 'hidden';
+                document.body.appendChild(b);
+                const w = b.offsetWidth, h = b.offsetHeight;
+                b.style.left = Math.max(w / 2 + 8, Math.min(window.innerWidth - w / 2 - 8, x)) + 'px';
+                b.style.top = Math.max(h + 14, y) + 'px';
+                b.style.visibility = 'visible';
+                setTimeout(function () { if (b.parentNode) b.parentNode.removeChild(b); }, 1600);
+            }
+            function celebrate(e, text, count) {
+                let x = window.innerWidth / 2, y = window.innerHeight / 2;
+                if (e) {
+                    if (typeof e.clientX === 'number' && (e.clientX || e.clientY)) { x = e.clientX; y = e.clientY; }
+                    else if (e.touches && e.touches[0]) { x = e.touches[0].clientX; y = e.touches[0].clientY; }
+                    else if (e.target && e.target.getBoundingClientRect) {
+                        const r = e.target.getBoundingClientRect();
+                        x = r.left + r.width / 2; y = r.top + r.height / 2;
+                    }
+                }
+                burst(x, y - 6, count);
+                if (text) bubble(x, y - 14, text);
+            }
+
+            /* ---------- 启动 ---------- */
+            function init() {
+                sizeCanvas();
+                window.addEventListener('resize', function () { sizeCanvas(); onScroll(); }, { passive: true });
+                window.addEventListener('scroll', onScroll, { passive: true });
+                if (finePointer && !reduce) {
+                    window.addEventListener('pointermove', function (e) {
+                        mx = (e.clientX / window.innerWidth - 0.5) * 2;
+                        my = (e.clientY / window.innerHeight - 0.5) * 2;
+                        queue();
+                    }, { passive: true });
+                }
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) twPause(false); else twResume();
+                });
+                window.addEventListener('beforeprint', function () { twPause(true); revealAll(); });
+                window.addEventListener('afterprint', twResume);
+                initReveal();
+                initTypewriter();
+                onScroll();
+            }
+
+            return { init: init, observe: observe, revealAll: revealAll, celebrate: celebrate };
+        })();
+
+        // ======================== RENDER ========================
+        function renderHighlights() {
+            $('#highlightsGrid').innerHTML = resume.highlights.map(h =>
+                `<div class="glass p-5 highlight-card" data-reveal="up">
+                    <div class="flex items-center gap-2.5 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600">
+                            ${icon(h.icon, 'w-4 h-4')}
+                        </div>
+                        <span class="text-lg font-extrabold stat-number leading-none">${h.metric}</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-900 mb-1">${h.title}</div>
+                    <p class="text-xs text-slate-900 leading-relaxed">${h.desc}</p>
+                </div>`
+            ).join('');
+        }
+
+        function renderSkills() {
+            $('#skillsGrid').innerHTML = resume.skills.map(s =>
+                `<div class="glass glass-sm p-4 card-hover" data-reveal="up">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-slate-900 font-medium flex items-center gap-2">${icon('check-circle-2','w-3.5 h-3.5 text-cyan-600/60')} ${s.label}</span>
+                        <span class="text-xs text-cyan-700 font-bold tabular-nums">${s.level}%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" style="width:${s.level}%"></div></div>
+                </div>`
+            ).join('');
+        }
+
+        function renderEducation() {
+            const e = resume.education;
+            $('#eduCard').innerHTML = `
+                <h3 class="text-sm font-semibold text-slate-900 mb-5 flex items-center gap-2">${icon('book-open','w-4 h-4 text-cyan-600')} 教育背景</h3>
+                <div class="space-y-2">
+                    <div class="text-sm font-semibold text-slate-900">${e.school}</div>
+                    <div class="text-sm text-slate-900">${e.major}</div>
+                    <div class="text-xs text-slate-700 flex items-center gap-1">${icon('calendar','w-3 h-3')} ${e.period}</div>
+                </div>
+                <div class="mt-5 pt-4 border-t border-slate-100">
+                    <div class="text-xs text-slate-700 font-medium mb-3">主要课程</div>
+                    <div class="flex flex-wrap gap-1.5">${e.courses.map(c => `<span class="capsule">${c}</span>`).join('')}</div>
+                </div>
+                ${e.extra ? `<p class="mt-4 text-xs text-slate-900 leading-relaxed">${e.extra}</p>` : ''}`;
+        }
+
+        function renderAwards() {
+            $('#awardsCard').innerHTML = `
+                <h3 class="text-sm font-semibold text-slate-900 mb-5 flex items-center gap-2">${icon('award','w-4 h-4 text-cyan-600')} 获奖与证书</h3>
+                <ul class="space-y-3">${resume.awards.map(a =>
+                    `<li class="flex items-start gap-2.5 text-sm text-slate-900">${icon('check-circle-2','w-4 h-4 text-cyan-600/50 mt-0.5 flex-shrink-0')} <span>${a}</span></li>`
+                ).join('')}</ul>
+                <div class="mt-5 pt-4 border-t border-slate-100">
+                    <h4 class="text-xs font-medium text-slate-700 mb-3">个人补充</h4>
+                    <ul class="space-y-2.5">${resume.personal.map(p =>
+                        `<li class="text-xs text-slate-900 leading-relaxed flex items-start gap-2">${icon('arrow-right','w-3 h-3 text-cyan-600/40 mt-0.5 flex-shrink-0')} <span>${p}</span></li>`
+                    ).join('')}</ul>
+                </div>`;
+        }
+
+        // 证书缩略图网格：startIdx 为该组在全部证书中的起始序号，点击后可在 24 张间连续翻页
+        function certGridHtml(g, startIdx) {
+            return `<div class="cert-grid grid ${g.cols || 'grid-cols-2 sm:grid-cols-4'} gap-3">
+                ${g.items.map((c, ii) => `
+                <div class="glass glass-sm p-2.5 card-hover cursor-pointer" data-cert="${c.file}" data-title="${c.name}" data-certidx="${startIdx + ii}" title="${c.name}">
+                    <img src="${c.file}" alt="${c.name}" loading="lazy" decoding="async" class="w-full h-28 object-cover rounded-md border border-slate-200/70" onerror="this.style.display='none'" />
+                    <div class="cert-name text-[11px] text-slate-900 font-medium mt-2 leading-snug">${c.name}</div>
+                    <div class="cert-hint text-[10px] text-slate-700 mt-1">点击放大</div>
+                </div>`).join('')}
+            </div>`;
+        }
+
+        // AI 认证证书独立区块：4 大系列横向标签页，移动端可左右滑动切换
+        function renderAICerts() {
+            const summary = $('#aiCertSummary');
+            const tabsEl = $('#certTabs');
+            const panelsEl = $('#certPanels');
+            if (!summary || !tabsEl || !panelsEl) return;
+
+            const total = resume.aiCerts.reduce((n, g) => n + g.items.length, 0);
+            const seriesNames = resume.aiCerts.map(g => g.shortLabel || g.group).join(' · ');
+            summary.innerHTML = `<div class="glass glass-blur glass-sm px-5 py-4 flex flex-wrap items-center gap-x-5 gap-y-2" data-reveal="up">
+                <span class="text-xs text-slate-700">认证总数</span>
+                <span class="text-lg font-extrabold stat-number leading-none">${total} 项</span>
+                <span class="text-xs text-slate-700">覆盖 ${resume.aiCerts.length} 大系列：${seriesNames}</span>
+            </div>`;
+
+            // 顶部横向标签：与“校园经历”一致，窄屏可左右滑动查看 4 个系列
+            tabsEl.innerHTML = resume.aiCerts.map((g, i) => {
+                const label = g.shortLabel || g.group;
+                return `<button type="button" role="tab" id="certTab-${i}" aria-selected="${i === 0 ? 'true' : 'false'}" aria-controls="certPanel-${i}" tabindex="${i === 0 ? '0' : '-1'}" class="tab-btn ${i === 0 ? 'active' : ''}" data-cert-tab="${i}">${label}<span class="cert-tab-count">${g.items.length}</span></button>`;
+            }).join('');
+
+            // 4 个模块面板全部渲染到 DOM（仅显示当前项），确保证书序号连续、打印时可全部展开
+            let offset = 0;
+            panelsEl.innerHTML = resume.aiCerts.map((g, i) => {
+                const start = offset;
+                offset += g.items.length;
+                return `<div class="cert-panel ${i === 0 ? 'block fade-in' : 'hidden'}" id="certPanel-${i}" role="tabpanel" aria-labelledby="certTab-${i}" aria-hidden="${i === 0 ? 'false' : 'true'}">
+                    <div class="glass p-6 card-hover" data-reveal="up-lg">
+                        <div class="flex items-center justify-between gap-3 flex-wrap">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600">${icon(g.icon || 'badge-check', 'w-4 h-4')}</div>
+                                <h3 class="text-sm font-semibold text-slate-900">${g.group}</h3>
+                            </div>
+                            <span class="capsule">${g.items.length} 项</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-3">${g.stack.map(s => `<span class="capsule">${s}</span>`).join('')}</div>
+                        <p class="text-sm text-slate-900 mt-3 leading-relaxed">${g.desc}</p>
+                        <div class="mt-3 text-xs font-medium text-slate-900 flex items-center gap-1.5">${icon('check-circle-2','w-3.5 h-3.5 text-cyan-600')} ${g.result}</div>
+                        <div class="mt-5 pt-5 border-t border-slate-100">
+                            <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('images','w-3 h-3 text-cyan-600')} 证书原件（共 ${g.items.length} 张 · 点击放大，可左右翻页）</div>
+                            ${certGridHtml(g, start)}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            function activateCertTab(index) {
+                const buttons = $$('[data-cert-tab]', tabsEl);
+                const panels = $$('.cert-panel', panelsEl);
+                if (!buttons.length || !panels.length) return;
+                const next = Math.max(0, Math.min(index, buttons.length - 1));
+                buttons.forEach((btn, i) => {
+                    const on = i === next;
+                    btn.classList.toggle('active', on);
+                    btn.setAttribute('aria-selected', on ? 'true' : 'false');
+                    btn.setAttribute('tabindex', on ? '0' : '-1');
+                });
+                panels.forEach((p, i) => {
+                    const on = i === next;
+                    p.classList.toggle('hidden', !on);
+                    p.classList.toggle('block', on);
+                    p.classList.toggle('fade-in', on);
+                    p.setAttribute('aria-hidden', on ? 'false' : 'true');
+                    if (on) FX.observe(p);   // 面板首次显示时补一次渐入观察
+                });
+            }
+
+            tabsEl.addEventListener('click', e => {
+                const btn = e.target.closest('[data-cert-tab]');
+                if (btn) activateCertTab(+btn.dataset.certTab);
+            });
+            tabsEl.addEventListener('keydown', e => {
+                const btns = $$('[data-cert-tab]', tabsEl);
+                const current = btns.indexOf(document.activeElement);
+                if (current < 0) return;
+                let next = current;
+                if (e.key === 'ArrowRight') next = (current + 1) % btns.length;
+                else if (e.key === 'ArrowLeft') next = (current - 1 + btns.length) % btns.length;
+                else if (e.key === 'Home') next = 0;
+                else if (e.key === 'End') next = btns.length - 1;
+                else return;
+                e.preventDefault();
+                activateCertTab(next);
+                btns[next].focus();
+            });
+        }
+
+        function renderCerts() {
+            // AI 证书缩略图：点击放大，并可在全部证书间左右翻页
+            const flatCerts = resume.aiCerts.flatMap(g => g.items.map(c => ({ ...c, group: g.group })));
+            $$('[data-certidx]').forEach(el => {
+                el.addEventListener('click', () => openCertViewer(flatCerts, +el.dataset.certidx));
+            });
+            // 项目卡片内的开发截图等单图，点击复用弹窗放大查看
+            $$('[data-viewimg]').forEach(el => {
+                el.addEventListener('click', () => {
+                    openCertViewer([{ file: el.dataset.viewimg, name: el.dataset.viewname || '图片' }], 0);
+                });
+            });
+            // 在线体验/游戏按钮：当前标签页直接跳转，玩完按一次返回即回到本简历页
+            $$('[data-openweb]').forEach(el => {
+                el.addEventListener('click', () => openInThisTab(el.dataset.openweb));
+            });
+            // PPT 幻灯片：点击复用弹窗全屏放大，并支持跨页左右翻页
+            $$('[data-pptslide]').forEach(el => {
+                el.addEventListener('click', () => {
+                    const track = el.closest('.ppt-track');
+                    const imgs = track ? $$('[data-pptslide]', track) : [el];
+                    const list = imgs.map((im, i) => ({ file: im.getAttribute('src'), name: `PPT 第 ${i + 1} / ${imgs.length} 页` }));
+                    openCertViewer(list, imgs.indexOf(el));
+                });
+            });
+        }
+
+        // ===== TABS =====
+        function renderTabs(navId, panelsId, data, cardMode) {
+            const nav = $(`#${navId}`), panels = $(`#${panelsId}`);
+            nav.innerHTML = ''; panels.innerHTML = '';
+            lastActive[navId] = data.length ? data[0].id : '';
+            data.forEach((tab, idx) => {
+                const btn = document.createElement('button');
+                btn.setAttribute('role', 'tab');
+                btn.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+                btn.className = `tab-btn ${idx === 0 ? 'active' : ''}`;
+                btn.textContent = tab.label;
+                btn.addEventListener('click', () => activateTab(navId, panelsId, tab.id));
+                nav.appendChild(btn);
+
+                const panel = document.createElement('div');
+                panel.className = `tab-panel-print ${idx === 0 ? 'block fade-in' : 'hidden'}`;
+                panel.setAttribute('role', 'tabpanel');
+                panel.setAttribute('aria-hidden', idx === 0 ? 'false' : 'true');
+
+                if (cardMode || tab.mode === 'cards') {
+                    panel.innerHTML = `<div class="space-y-5">${tab.items.map((item, ii) => {
+                        let certHtml = '';
+                        if (item.cert && item.certType) {
+                            if (item.certType === 'image') {
+                                certHtml = `<div class="mt-4">
+                                    <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('badge-check','w-3 h-3 text-cyan-600')} ${item.certName || '获奖证书'}</div>
+                                    <img src="${item.cert}" alt="${item.certName || ''}" loading="lazy" decoding="async" data-viewimg="${item.cert}" data-viewname="${item.certName || '获奖证书'}" class="w-full rounded-md border border-slate-200/70 cursor-pointer" />
+                                </div>`;
+                            } else {
+                                certHtml = `<div class="mt-4">
+                                    <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('file-text','w-3 h-3 text-cyan-600')} ${item.certName || '附件预览'}</div>
+                                    <object data="${item.cert}" type="application/pdf" class="w-full rounded-md border border-slate-200/70 bg-white" style="height:640px"><span class="text-[10px] text-slate-700">当前浏览器不支持在线预览，请点击下方链接打开。</span></object>
+                                    <a href="${item.cert}" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-700 hover:text-cyan-500 underline underline-offset-2">${icon('external-link','w-3.5 h-3.5 shrink-0')} 在新标签打开 / 下载（手机端可点此查看）</a>
+                                </div>`;
+                            }
+                        }
+                        let linkHtml = '';
+                        if (item.link) {
+                            if (/^https?:\/\//i.test(item.link)) {
+                                // 在线链接默认当前标签页打开：返回键一次一步回到本简历页，不会残留 iframe 幽灵历史
+                                linkHtml = `<div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                                    <button type="button" data-openweb="${item.link}" class="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg px-3.5 py-2 transition-colors">${icon('play','w-3.5 h-3.5 shrink-0')} ${item.linkText || '在线体验'}</button>
+                                    <a href="${item.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-[10px] font-medium text-slate-500 hover:text-cyan-600 underline underline-offset-2 break-all">${icon('external-link','w-3 h-3 shrink-0')} 新标签打开</a>
+                                </div>`;
+                            } else {
+                                linkHtml = `<a href="${item.link}" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-700 hover:text-cyan-500 underline underline-offset-2 break-all">${icon('external-link','w-3.5 h-3.5 shrink-0')} ${item.linkText || '在线体验'}：${item.link}</a>`;
+                            }
+                        }
+                        let imageHtml = '';
+                        if (item.image) {
+                            imageHtml = `<div class="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon(item.imageIcon || 'code-2','w-3 h-3 text-cyan-600')} ${item.imageTitle || '开发实录'}</div>
+                                <img src="${item.image}" alt="${item.imageAlt || ''}" loading="lazy" decoding="async" class="w-full rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" data-viewimg="${item.image}" data-viewname="${item.imageAlt || item.title}" />
+                                <div class="no-print text-[10px] text-slate-700 mt-1.5">点击放大</div>
+                            </div>`;
+                        }
+                        let videoHtml = '';
+                        if (item.audio && item.audio.length) {
+                            videoHtml = `<div class="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('music','w-3 h-3 text-cyan-600')} 在线试听</div>
+                                <audio controls loop preload="metadata" class="w-full">
+                                    ${item.audio.map(s => `<source src="${s.src}" type="${s.type}">`).join('')}
+                                    当前浏览器不支持音频播放，<a href="${item.audio[item.audio.length - 1].src}" class="underline">点此下载收听</a>。
+                                </audio>
+                            </div>`;
+                        }
+                        let slidesHtml = '';
+                        if (item.slides && item.slides.length) {
+                            const st = item.slidesTitle || 'PPT';
+                            slidesHtml = `<div class="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('presentation','w-3 h-3 text-cyan-600')} ${st}（共 ${item.slides.length} 页 · 左右滑动翻阅，点击全屏放大）</div>
+                                <div class="ppt-track flex gap-3 overflow-x-auto pb-2" style="scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;">
+                                    ${item.slides.map((s, si) => `<img src="${s}" alt="${st} 第${si + 1}页" loading="lazy" decoding="async" class="rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" style="width:min(86vw,600px);flex:0 0 auto;scroll-snap-align:center;" data-pptslide data-pptidx="${si}" />`).join('')}
+                                </div>
+                                <div class="no-print text-[10px] text-slate-700 mt-1.5">← 左右滑动查看全部 ${item.slides.length} 页 →</div>
+                            </div>`;
+                        }
+                        return `<div class="glass p-6 card-hover" data-reveal="up-lg">
+                            <div class="text-sm font-semibold text-slate-900">${item.title}</div>
+                            <div class="flex flex-wrap gap-1.5 mt-3">${item.stack.map(s => `<span class="capsule">${s}</span>`).join('')}</div>
+                            <p class="text-sm text-slate-900 mt-4 leading-relaxed">${item.desc}</p>
+                            <div class="mt-4 text-xs font-medium text-slate-900 flex items-center gap-1.5">${icon('check-circle-2','w-3.5 h-3.5 text-cyan-600')} ${item.result}</div>
+                            ${linkHtml}
+                            ${slidesHtml}
+                            ${imageHtml}
+                            ${videoHtml}
+                            ${certHtml}
+                        </div>`;
+                    }).join('')}</div>`;
+                } else {
+                    panel.innerHTML = `<div class="relative" style="padding-left: 22px;">
+                        <div class="tl-line" style="left:7px;"></div>
+                        ${tab.items.map(entry => `<div class="relative pb-8 last:pb-0" data-reveal="up">
+                            <div class="tl-dot" style="position:absolute;left:-22px;top:4px;"></div>
+                            <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 mb-1">
+                                <span class="text-sm font-semibold text-slate-900">${entry.title}</span>
+                                <span class="text-xs text-slate-700 font-medium">${entry.period}</span>
+                            </div>
+                            <div class="text-xs text-cyan-700 mb-3 font-medium">${entry.subtitle}</div>
+                            <ul class="space-y-2">${entry.details.map(d =>
+                                `<li class="text-sm text-slate-900 leading-relaxed flex items-start gap-2.5"><span class="mt-2.5 block w-1 h-1 rounded-full bg-cyan-500/60 flex-shrink-0"></span><span>${d}</span></li>`
+                            ).join('')}</ul>
+                        </div>`).join('')}
+                    </div>`;
+                }
+                panels.appendChild(panel);
+            });
+        }
+
+        function activateTab(navId, panelsId, tabId) {
+            const nav = $(`#${navId}`), panels = $(`#${panelsId}`);
+            const btns = $$('[role="tab"]', nav);
+            const data = navId === 'expTabs' ? resume.experience : resume.projects;
+            // 旧的返回上下文可能指向已删除的子标签，这里做兜底，避免所有面板都被隐藏
+            if (tabId && !data.some(t => t.id === tabId)) tabId = data[0] ? data[0].id : '';
+            lastActive[navId] = tabId;
+            let tabIdx = -1;
+            btns.forEach((btn, i) => {
+                const isActive = data[i] && data[i].id === tabId;
+                btn.className = `tab-btn ${isActive ? 'active' : ''}`;
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                if (isActive) tabIdx = i;
+            });
+            [...panels.children].forEach((p, i) => {
+                if (i === tabIdx) { p.classList.remove('hidden'); p.classList.add('block', 'fade-in'); p.setAttribute('aria-hidden', 'false'); FX.observe(p); }
+                else { p.classList.add('hidden'); p.classList.remove('block', 'fade-in'); p.setAttribute('aria-hidden', 'true'); }
+            });
+        }
+
+        // ======================== 从游戏页返回后恢复离开前的位置 ========================
+        // openInThisTab 跳转前记录了滚动位置与子标签；返回时若页面重新加载，
+        // 先切回原来的子标签面板（否则整页高度不对、落点会跑到最上/最下），再恢复滚动位置。
+        function restoreBackCtx() {
+            let ctx = null;
+            try { ctx = JSON.parse(sessionStorage.getItem('backCtx') || 'null'); } catch (e) {}
+            if (!ctx || typeof ctx.y !== 'number' || Date.now() - (ctx.t || 0) > 30 * 60 * 1000) return;
+            try { sessionStorage.removeItem('backCtx'); } catch (e) {}
+            try { history.scrollRestoration = 'manual'; } catch (e) {}   // 不让浏览器自己粗估的恢复位置捣乱
+            if (ctx.exp) activateTab('expTabs', 'expPanels', ctx.exp);
+            if (ctx.proj) activateTab('projTabs', 'projPanels', ctx.proj);
+            let userScrolled = false;
+            ['wheel', 'touchstart', 'keydown'].forEach(ev =>
+                window.addEventListener(ev, () => { userScrolled = true; }, { once: true, passive: true }));
+            const go = () => { if (!userScrolled) window.scrollTo(0, ctx.y); };
+            // 多次补位：立即可见 → 图片载入页高稳定后 → 压过浏览器自身恢复的时机
+            requestAnimationFrame(go);
+            window.addEventListener('load', go);
+            setTimeout(go, 300);
+            setTimeout(go, 1200);
+        }
+
+        // ======================== INIT ========================
+        function init() {
+            initAvatar();
+            renderHighlights();
+            renderSkills();
+            renderEducation();
+            renderAwards();
+            renderTabs('expTabs', 'expPanels', resume.experience, false);
+            renderTabs('projTabs', 'projPanels', resume.projects, true);
+            renderAICerts();
+            renderCerts();
+            FX.init();      // 动效引擎最后启动：此时所有 data-reveal 节点已渲染完毕
+            restoreBackCtx();   // 从游戏页返回时，恢复到点击游戏前的子标签与滚动位置
+
+            // Print（打印前先展开全部渐入内容，并把懒加载图片取回来，避免纸上出现空白）
+            function wakeImages() {
+                const waits = [];
+                $$('img[loading="lazy"]').forEach(img => {
+                    if (img.complete && img.naturalWidth) return;
+                    img.loading = 'eager';
+                    if (!img.getAttribute('src')) return;
+                    waits.push(new Promise(resolve => {
+                        let settled = false;
+                        const fin = () => { if (!settled) { settled = true; resolve(); } };
+                        img.addEventListener('load', fin, { once: true });
+                        img.addEventListener('error', fin, { once: true });
+                        setTimeout(fin, 4000);
+                        const src = img.src; img.src = src;   // 重新触发被浏览器推迟的请求
+                    }));
+                });
+                return waits.length ? Promise.race([Promise.all(waits), new Promise(r => setTimeout(r, 4500))]) : Promise.resolve();
+            }
+            const doPrint = () => { FX.revealAll(); wakeImages().then(() => window.print()); };
+            $('#printBtn').addEventListener('click', doPrint);
+            $('#printBtn2').addEventListener('click', doPrint);
+            window.addEventListener('beforeprint', wakeImages);
+
+            // Copy WeChat（成功后在光标位置发射彩带粒子 + 气泡反馈）
+            $('#copyWechatBtn').addEventListener('click', (e) => {
+                const pt = { clientX: e.clientX, clientY: e.clientY };
+                const done = () => FX.celebrate(pt, '微信号已复制 ✓');
+                const legacyCopy = () => {
+                    const ta = document.createElement('textarea');
+                    ta.value = resume.contact.wechat; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.select();
+                    let ok = false;
+                    try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+                    document.body.removeChild(ta);
+                    return ok;
+                };
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(resume.contact.wechat).then(done).catch(() => { legacyCopy() ? done() : showToast('复制失败'); });
+                } else {
+                    legacyCopy() ? done() : showToast('复制失败');
+                }
+            });
+
+            // 打个招呼：光标位置彩带粒子 + 气泡反馈
+            const helloBtn = $('#helloBtn');
+            if (helloBtn) helloBtn.addEventListener('click', (e) => FX.celebrate(e, '你好呀，很高兴认识你！', 110));
+        }
+
+        document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+    })();
+    </script>
+</body>
+</html>
