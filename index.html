@@ -1190,7 +1190,7 @@
                             slidesHtml = `<div class="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
                                 <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('presentation','w-3 h-3 text-cyan-600')} ${st}（共 ${item.slides.length} 页 · 左右滑动翻阅，点击全屏放大）</div>
                                 <div class="ppt-track flex gap-3 overflow-x-auto pb-2" style="scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;">
-                                    ${item.slides.map((s, si) => `<img src="${s}" alt="${st} 第${si + 1}页" loading="lazy" decoding="async" class="rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" style="width:min(86vw,600px);flex:0 0 auto;scroll-snap-align:center;" data-pptslide data-pptidx="${si}" />`).join('')}
+                                    ${item.slides.map((s, si) => `<img src="${s}" alt="${st} 第${si + 1}页" width="1200" height="675" loading="lazy" decoding="async" class="rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" style="width:min(86vw,600px);height:auto;flex:0 0 auto;scroll-snap-align:center;" data-pptslide data-pptidx="${si}" />`).join('')}
                                 </div>
                                 <div class="no-print text-[10px] text-slate-700 mt-1.5">← 左右滑动查看全部 ${item.slides.length} 页 →</div>
                             </div>`;
