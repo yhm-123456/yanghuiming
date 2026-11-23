@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="杨蕙名 · 个人简历" />
     <meta property="og:url" content="https://yhm-123456.github.io/yanghuiming/" />
     <meta property="og:title" content="杨蕙名 · 个人简历｜江西理工大学 机械电子工程 2026 级" />
-    <meta property="og:description" content="24 项 AI 认证 · 2 款上线小游戏 · 1 个 3D 诗词球网页 · 1 套 AI 辅助 PPT。" />
+    <meta property="og:description" content="用 AI 做出两款网页游戏、一个 3D 诗词球和这个站点；24 项 AI 认证，校职业规划大赛与演讲比赛双二等奖。" />
     <meta property="og:image" content="https://yhm-123456.github.io/yanghuiming/og-cover.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
@@ -73,9 +73,9 @@
         .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
         .ico { flex-shrink: 0; display: inline-block; vertical-align: -0.125em; }
 
-        /* 手机端首屏压缩：默认只显示第一段简介，点「展开全部」看完整内容 */
+        /* 手机端首屏压缩：默认显示前两段（身份 + 在做什么），点「展开全部」看完整内容 */
         @media (max-width: 639px) {
-            #bioText.is-clamped > p:nth-child(n + 2) { display: none; }
+            #bioText.is-clamped > p:nth-child(n + 3) { display: none; }
         }
 
         /* Link underline */
@@ -403,9 +403,9 @@
                     </div>
                     <div class="mt-5 sm:mt-6 max-w-2xl text-sm text-slate-900">
                         <div id="bioText" class="is-clamped space-y-3">
-                            <p class="text-[15px] font-semibold leading-relaxed">大家好！我是来自河南的大一新生，就读于江西理工大学机械电子工程专业。</p>
-                            <p class="leading-[1.9] border-l-2 border-cyan-500/50 pl-3">我热爱 AI 技术，已取得阿里云、华为云、科大讯飞、Datawhale 四大系列共 24 项 AI 认证；也擅长把 AI 用起来——用 AI 工具开发出《飞机大战》《坦克大战》两款网页游戏、生成 AI 音乐作品、制作精美 PPT，还与 AI 协作完成了本简历网站的开发部署。</p>
-                            <p class="leading-relaxed text-slate-700">在校期间我积极参加竞赛锻炼综合能力，获第五届校职业规划大赛院级二等奖、主题演讲比赛二等奖。希望志同道合的伙伴一起成长，把 AI 用到更多学习与创作场景中。</p>
+                            <p class="text-[15px] font-semibold leading-relaxed">我是杨蕙名，江西理工大学机械电子工程 2026 级。</p>
+                            <p class="leading-[1.9] border-l-2 border-cyan-500/50 pl-3">我用 AI 编程工具做出四个能直接打开的作品：两款网页游戏、一个 3D 诗词球，还有你现在看的这个站点；顺手考了阿里云、华为云、科大讯飞、Datawhale 四大系列 24 项 AI 认证，但更喜欢做能用的东西。</p>
+                            <p class="leading-relaxed text-slate-700">在校拿了第五届校职业规划大赛院级二等奖和学院主题演讲比赛二等奖——一个练方向，一个练表达。</p>
                         </div>
                         <button id="bioToggle" class="no-print sm:hidden mt-2.5 text-xs font-semibold text-cyan-700 hover:text-cyan-500 transition-colors" aria-expanded="false" aria-controls="bioText">展开全部 ▾</button>
                         <div class="flex items-center gap-2.5 flex-wrap pt-3">
@@ -542,7 +542,7 @@
             name: '杨蕙名',
             title: '江西理工大学 · 机械电子工程（2026 级）',
             avatar: 'avatar.webp',
-            bio: '大家好！我是来自河南的大一新生，就读于江西理工大学机械电子工程专业。我热爱 AI 技术，已取得阿里云、华为云、科大讯飞、Datawhale 四大系列共 24 项 AI 认证；也擅长把 AI 用起来——用 AI 工具开发出《飞机大战》《坦克大战》两款网页游戏、生成 AI 音乐作品、制作精美 PPT，还与 AI 协作完成了本简历网站的开发部署。在校期间我积极参加竞赛锻炼综合能力，获第五届校职业规划大赛院级二等奖、主题演讲比赛二等奖。希望与志同道合的伙伴一起成长，把 AI 用到更多学习与创作场景中。',
+            bio: '我是杨蕙名，江西理工大学机械电子工程 2026 级。我用 AI 编程工具做出四个能直接打开的作品：两款网页游戏、一个 3D 诗词球，还有你现在看的这个站点；顺手考了阿里云、华为云、科大讯飞、Datawhale 四大系列 24 项 AI 认证，但更喜欢做能用的东西。在校拿了第五届校职业规划大赛院级二等奖和学院主题演讲比赛二等奖——一个练方向，一个练表达。',
             location: '河南省',
             contact: { email: 'yanghuiming2023@163.com', phone: '19838237532', wechat: 'Y47311942717', qq: '3238233840' },
             highlights: [
