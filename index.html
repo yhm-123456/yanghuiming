@@ -824,7 +824,7 @@
                     io.observe(el);
                 }
             }
-            function revealAll() {                           // 兜底 / 打印前：立即全部显示
+            function revealAll() {                           // 兜底：立即全部显示
                 const list = document.querySelectorAll('[data-reveal]:not(.rv-shown)');
                 for (let i = 0; i < list.length; i++) { list[i].classList.remove('is-in'); list[i].classList.add('rv-shown'); }
                 const fills = document.querySelectorAll('.skill-fill:not(.is-in)');
@@ -1015,7 +1015,7 @@
                 return `<button type="button" role="tab" id="certTab-${i}" aria-selected="${i === 0 ? 'true' : 'false'}" aria-controls="certPanel-${i}" tabindex="${i === 0 ? '0' : '-1'}" class="tab-btn ${i === 0 ? 'active' : ''}" data-cert-tab="${i}">${label}</button>`;
             }).join('');
 
-            // 4 个模块面板全部渲染到 DOM（仅显示当前项），确保证书序号连续、打印时可全部展开
+            // 4 个模块面板全部渲染到 DOM（仅显示当前项），确保证书序号连续
             let offset = 0;
             panelsEl.innerHTML = resume.aiCerts.map((g, i) => {
                 const start = offset;
