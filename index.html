@@ -300,40 +300,6 @@
             .tw-caret, .glow-cyan, .glow-indigo { animation: none !important; transition: none !important; }
         }
 
-        /* Print */
-        @media print {
-            @page { size: A4; margin: 14mm 16mm; }
-            body { background: #fff !important; color: #18181b !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .no-print { display: none !important; }
-            .glass, .glass-blur { background: #fff !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-color: #e4e4e7 !important; }
-            .glass-sm { background: #fff !important; }
-            section { padding-top: 10px !important; padding-bottom: 10px !important; }
-            .page-wrap { max-width: 100% !important; padding: 0 !important; }
-            .tab-panel-print { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
-            .tab-panel-print[aria-hidden="true"] { display: none !important; }
-            /* AI 证书标签页：打印时隐藏标签栏，4 个模块全部展开 */
-            #certTabs { display: none !important; }
-            #certPanels .cert-panel { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
-            #certPanels .cert-panel + .cert-panel { margin-top: 20px; }
-            .glow-cyan, .glow-indigo { display: none !important; }
-            #scrollProgress, #fxCanvas, .fx-bubble, .tw-caret { display: none !important; }
-            [data-reveal] { opacity: 1 !important; transform: none !important; animation: none !important; }
-            h2[data-reveal]::after { display: none !important; }
-
-            /* 媒体与横向滚动区不上纸：音频/视频换成黑块，PPT 横滑条会被截断 */
-            audio, video, .ppt-track { display: none !important; }
-            /* 证书缩略图压成 6 列小图，24 张不再占好几页 */
-            .cert-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 5px !important; }
-            .cert-grid img { height: 62px !important; }
-            .cert-grid .cert-name { font-size: 8px !important; line-height: 1.3 !important; }
-            .cert-grid .cert-hint { display: none !important; }
-            .cert-grid .glass { padding: 4px !important; }
-            /* 小卡片与条目避免被拦腰截断；证书系列卡片允许跨页，否则整卡被推到下一页会留大片空白 */
-            .glass, .highlight-card, li { break-inside: avoid; page-break-inside: avoid; }
-            #certPanels .cert-panel > .glass { break-inside: auto; page-break-inside: auto; }
-            h2 { break-after: avoid; page-break-after: avoid; }
-            img { max-width: 100% !important; }
-        }
     </style>
 </head>
 
@@ -576,11 +542,11 @@
             }, {
                 id: 'aicode', label: '网站',
                 items: [{
-                    title: '个人简历网站（就是你现在看的这个）',
-                    stack: ['AI 辅助编程', 'HTML / CSS / JS', '打印排版'],
-                    desc: '129KB 的单个 HTML 文件装下全部内容和样式，43 张图片压到 2.5MB；按打印会自动排成 6 页 A4，证书不会被从中间切开。',
-                    result: '已上线 · 手机、打印、微信分享都能用',
-                    challenge: '判断 AI 哪里写错了，比让它写出来难得多。很多错误不报错、只是「看着不对」——手机上横向溢出、图片加载后整页跳、打印时证书被切成两半，只能靠逐屏截图和打印预览比对才发现。',
+                    title: '个人简历网站',
+                    stack: ['AI 辅助编程', 'HTML / CSS / JS', '纯静态'],
+                    desc: '前面四个作品是游戏和网页，第五个是装它们的容器——你现在正站在里面。前几个只要「能跑」，这个要考虑的是「别人打开后会不会用」：手机上字够不够大、证书能不能看清、分享出去有没有封面。',
+                    result: '已上线 · 手机、电脑、微信里都能看',
+                    challenge: '判断 AI 哪里写错了，比让它写出来难得多。很多错误不报错、只是「看着不对」——手机上横向溢出、图片加载后整页跳、点开证书弹窗后背后的页面还在滚，只能逐屏截图比对才发现。',
                     image: 'img_03.webp', imageW: 1100, imageH: 688, imageAlt: 'AI 运行代码开发简历网站截图'
                 }]
             }, {
@@ -1311,25 +1277,6 @@
             FX.init();      // 动效引擎最后启动：此时所有 data-reveal 节点已渲染完毕
             restoreBackCtx();   // 从游戏页返回时，恢复到点击游戏前的子标签与滚动位置
 
-            // Print（打印前先展开全部渐入内容，并把懒加载图片取回来，避免纸上出现空白）
-            function wakeImages() {
-                const waits = [];
-                $$('img[loading="lazy"]').forEach(img => {
-                    if (img.complete && img.naturalWidth) return;
-                    img.loading = 'eager';
-                    if (!img.getAttribute('src')) return;
-                    waits.push(new Promise(resolve => {
-                        let settled = false;
-                        const fin = () => { if (!settled) { settled = true; resolve(); } };
-                        img.addEventListener('load', fin, { once: true });
-                        img.addEventListener('error', fin, { once: true });
-                        setTimeout(fin, 4000);
-                        const src = img.src; img.src = src;   // 重新触发被浏览器推迟的请求
-                    }));
-                });
-                return waits.length ? Promise.race([Promise.all(waits), new Promise(r => setTimeout(r, 4500))]) : Promise.resolve();
-            }
-            window.addEventListener('beforeprint', wakeImages);
 
             // 复制联系方式（邮箱 / 微信）：成功后在光标位置发射彩带粒子 + 气泡反馈
             function bindCopy(sel, value, okText, failText) {
