@@ -73,10 +73,6 @@
         .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
         .ico { flex-shrink: 0; display: inline-block; vertical-align: -0.125em; }
 
-        /* 手机端首屏压缩：默认显示前两段（身份 + 在做什么），点「展开全部」看完整内容 */
-        @media (max-width: 639px) {
-            #bioText.is-clamped > p:nth-child(n + 3) { display: none; }
-        }
 
         /* Link underline */
         .link-underline { position: relative; text-decoration: none; }
@@ -322,9 +318,6 @@
 
             /* 媒体与横向滚动区不上纸：音频/视频换成黑块，PPT 横滑条会被截断 */
             audio, video, .ppt-track { display: none !important; }
-            /* 打印时简介必须完整 */
-            #bioText.is-clamped > p, #bioText > p { display: block !important; }
-            #bioToggle { display: none !important; }
             /* 证书缩略图压成 6 列小图，24 张不再占好几页 */
             .cert-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 5px !important; }
             .cert-grid img { height: 62px !important; }
@@ -399,12 +392,10 @@
                         </div>
                     </div>
                     <div class="mt-5 sm:mt-6 max-w-2xl text-sm text-slate-900">
-                        <div id="bioText" class="is-clamped space-y-3">
-                            <p class="text-[15px] font-semibold leading-relaxed">我是杨蕙名，江西理工大学机械电子工程 2026 级。</p>
+                        <div id="bioText" class="space-y-3">
                             <p class="leading-[1.9] border-l-2 border-cyan-500/50 pl-3">我用 AI 编程工具做出四个能直接打开的作品：两款网页游戏、一个 3D 诗词球，还有你现在看的这个站点；顺手考了阿里云、华为云、科大讯飞、Datawhale 四大系列 24 项 AI 认证，但更喜欢做能用的东西。</p>
                             <p class="leading-relaxed text-slate-700">在校拿了第五届校职业规划大赛院级二等奖和学院主题演讲比赛二等奖——一个练方向，一个练表达。</p>
                         </div>
-                        <button id="bioToggle" class="no-print sm:hidden mt-2.5 text-xs font-semibold text-cyan-700 hover:text-cyan-500 transition-colors" aria-expanded="false" aria-controls="bioText">展开全部 ▾</button>
                         <div class="flex items-center gap-2.5 flex-wrap pt-3">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-900">
                                 <svg class="ico w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-at-sign"></use></svg> 邮箱：yanghuiming2023@163.com
@@ -525,7 +516,7 @@
             name: '杨蕙名',
             title: '江西理工大学 · 机械电子工程（2026 级）',
             avatar: 'avatar.webp',
-            bio: '我是杨蕙名，江西理工大学机械电子工程 2026 级。我用 AI 编程工具做出四个能直接打开的作品：两款网页游戏、一个 3D 诗词球，还有你现在看的这个站点；顺手考了阿里云、华为云、科大讯飞、Datawhale 四大系列 24 项 AI 认证，但更喜欢做能用的东西。在校拿了第五届校职业规划大赛院级二等奖和学院主题演讲比赛二等奖——一个练方向，一个练表达。',
+            bio: '我用 AI 编程工具做出四个能直接打开的作品：两款网页游戏、一个 3D 诗词球，还有你现在看的这个站点；顺手考了阿里云、华为云、科大讯飞、Datawhale 四大系列 24 项 AI 认证，但更喜欢做能用的东西。在校拿了第五届校职业规划大赛院级二等奖和学院主题演讲比赛二等奖——一个练方向，一个练表达。',
             location: '河南省',
             contact: { email: 'yanghuiming2023@163.com', phone: '19838237532', wechat: 'Y47311942717' },
             highlights: [
@@ -1425,15 +1416,6 @@
             bindCopy('#copyEmailBtn', resume.contact.email, '邮箱已复制 ✓', '复制失败，请手动选择邮箱');
             bindCopy('#copyWechatBtn', resume.contact.wechat, '微信号已复制 ✓', '复制失败，请手动选择微信号');
 
-            // 手机端简介折叠 / 展开
-            const bioToggle = $('#bioToggle'), bioText = $('#bioText');
-            if (bioToggle && bioText) {
-                bioToggle.addEventListener('click', () => {
-                    const clamped = bioText.classList.toggle('is-clamped');
-                    bioToggle.textContent = clamped ? '展开全部 ▾' : '收起 ▴';
-                    bioToggle.setAttribute('aria-expanded', String(!clamped));
-                });
-            }
         }
 
         document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
