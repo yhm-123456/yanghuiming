@@ -506,7 +506,7 @@
                     desc: 'F05 水中机器鱼仿真组第三赛季，科目一障碍竞速，个人赛（证书载明任队长）。控制一条仿生机器鱼在三维水池里绕两侧柱子、穿中间门区跑完两圈，比的是不撞柱和用时。路径由六个途经点生成 Dubins 曲线，按 8mm 步长离散；20Hz 的控制周期里跑偏航 PID、推力分级和绕柱半径守卫三套逻辑。',
                     challenge: '难在推力已经用尽了。胸鳍单侧上限 50N、尾角 ±80°，摆幅加到 36° 就在柱边内切撞柱——靠「加大推力、加快尾频」换不到更快了。最后给曲线段压了一条 46N 的推力地板，防住「越慢越减力、越减力越慢」的自锁；再加一套楔形锁舵，一旦失速又贴近柱面就把摆幅压到 12° 保命。成绩从 16 秒不稳压到 14.8 秒上下，最好一次 14.62 秒。',
                     result: '国赛二等奖 · 2026 年 11 月',
-                    cert: 'cert_rst.webp', certType: 'image', certW: 1400, certH: 1980, certName: '第十九届先进机器人及仿真技术大赛国赛二等奖证书'
+                    cert: 'cert_rst.webp', certType: 'image', certW: 1000, certH: 1414, certName: '第十九届先进机器人及仿真技术大赛国赛二等奖证书'
                 }]
             }, {
                 id: 'zhiye', label: '职业规划大赛', mode: 'cards',
@@ -515,7 +515,7 @@
                     stack: ['职业规划', '自我盘点', '路径设计'],
                     desc: '参赛作品是一份完整的职业规划书：从机械电子工程的专业方向出发，写清大学四年的学业目标与技能路线，也盘点了自己的优势和短板。',
                     result: '院级选拔赛二等奖 · 2026 年 10 月',
-                    cert: 'cert_career.webp', certType: 'image', certW: 1400, certH: 1050, certName: '职业规划大赛院级选拔赛二等奖荣誉证书'
+                    cert: 'cert_career.webp', certType: 'image', certW: 1000, certH: 750, certName: '职业规划大赛院级选拔赛二等奖荣誉证书'
                 }]
 
             }, {
@@ -525,7 +525,7 @@
                     stack: ['主题演讲', '稿件撰写', '舞台表达'],
                     desc: '稿子自己写、自己改，从初稿一路改到上台。',
                     result: '院级二等奖 · 2026 年 9 月',
-                    cert: 'img_29.webp', certType: 'image', certW: 1400, certH: 1050, certName: '演讲比赛二等奖荣誉证书'
+                    cert: 'img_29.webp', certType: 'image', certW: 1000, certH: 750, certName: '演讲比赛二等奖荣誉证书'
                 }]
             }],
             projects: [{
@@ -1007,7 +1007,7 @@
             return `<div class="cert-grid grid ${g.cols || 'grid-cols-2 sm:grid-cols-4'} gap-3">
                 ${g.items.map((c, ii) => `
                 <div class="relative glass glass-sm p-2.5 card-hover cursor-pointer" data-cert="${c.file}" data-title="${c.name}" data-certidx="${startIdx + ii}" title="${c.name}">
-                    <img src="${c.file}" alt="${c.name}" loading="lazy" decoding="async" class="w-full h-28 object-cover rounded-md border border-slate-200/70" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                    <img src="${/^img_\d+\.webp$/.test(c.file) ? 't_' + c.file : c.file}" alt="${c.name}" loading="lazy" decoding="async" class="w-full h-28 object-cover rounded-md border border-slate-200/70" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='${c.file}';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" />
                     <div class="hidden w-full h-28 rounded-md border border-dashed border-slate-300 bg-slate-50 items-center justify-center text-[10px] text-slate-500 text-center px-1">图片未加载<br>点击重试</div>
                     <div class="cert-name text-[11px] text-slate-900 font-medium mt-2 leading-snug">${c.name}</div>
                 </div>`).join('')}
@@ -1112,6 +1112,25 @@
                     openCertViewer([{ file: el.dataset.viewimg, name: el.dataset.viewname || '图片' }], 0);
                 });
             });
+            // 音频懒加载：点击后才创建 <audio>，避免页面打开就下载整首音频
+            $$('[data-audio-load]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    let list = [];
+                    try { list = JSON.parse(decodeURIComponent(btn.dataset.audioLoad)); } catch (e) { return; }
+                    if (!list.length) return;
+                    const audio = document.createElement('audio');
+                    audio.controls = true; audio.loop = true; audio.preload = 'metadata';
+                    audio.className = 'w-full';
+                    list.forEach(s => {
+                        const src = document.createElement('source');
+                        src.src = s.src; src.type = s.type;
+                        audio.appendChild(src);
+                    });
+                    btn.replaceWith(audio);
+                    audio.load();
+                    audio.play().catch(() => {});   // 浏览器可能拦截自动播放，用户再点一次即可
+                });
+            });
             // 在线体验/游戏按钮：当前标签页直接跳转，玩完按一次返回即回到本简历页
             $$('[data-openweb]').forEach(el => {
                 el.addEventListener('click', (e) => {
@@ -1189,12 +1208,13 @@
                         }
                         let videoHtml = '';
                         if (item.audio && item.audio.length) {
-                            videoHtml = `<div class="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            // 懒加载：先不放 <audio>，点按钮才创建，避免一进页面就下载整首音频
+                            videoHtml = `<div class="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200" data-audio-box>
                                 <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('music','w-3 h-3 text-cyan-600')} 在线试听</div>
-                                <audio controls loop preload="metadata" class="w-full">
-                                    ${item.audio.map(s => `<source src="${s.src}" type="${s.type}">`).join('')}
-                                    当前浏览器不支持音频播放，<a href="${item.audio[item.audio.length - 1].src}" class="underline">点此下载收听</a>。
-                                </audio>
+                                <button type="button" data-audio-load="${encodeURIComponent(JSON.stringify(item.audio))}" class="inline-flex items-center gap-2 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg px-3.5 py-2 transition-colors">
+                                    ${icon('play','w-3.5 h-3.5 shrink-0')} 点击加载并播放
+                                </button>
+                                <span class="text-[10px] text-slate-600 ml-2">不点不消耗流量</span>
                             </div>`;
                         }
                         let slidesHtml = '';
@@ -1203,7 +1223,7 @@
                             slidesHtml = `<div class="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
                                 <div class="text-[10px] text-slate-700 font-medium uppercase tracking-wide mb-2 flex items-center gap-1.5">${icon('presentation','w-3 h-3 text-cyan-600')} ${st}（共 ${item.slides.length} 页 · 左右滑动翻阅，点击全屏放大）</div>
                                 <div class="ppt-track flex gap-3 overflow-x-auto pb-2" style="scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;">
-                                    ${item.slides.map((s, si) => `<img src="${s}" alt="${st} 第${si + 1}页" width="1200" height="675" loading="lazy" decoding="async" class="rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" style="width:min(86vw,600px);height:auto;flex:0 0 auto;scroll-snap-align:center;" data-pptslide data-pptidx="${si}" />`).join('')}
+                                    ${item.slides.map((s, si) => `<img src="${s}" alt="${st} 第${si + 1}页" width="1000" height="562" loading="lazy" decoding="async" class="rounded-md border border-slate-200/70 cursor-pointer hover:opacity-90 transition-opacity" style="width:min(86vw,600px);height:auto;flex:0 0 auto;scroll-snap-align:center;" data-pptslide data-pptidx="${si}" />`).join('')}
                                 </div>
                                 <div class="no-print text-[10px] text-slate-700 mt-1.5">← 左右滑动查看全部 ${item.slides.length} 页 →</div>
                             </div>`;
