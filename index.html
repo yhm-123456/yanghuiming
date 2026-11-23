@@ -1257,7 +1257,12 @@
             });
             // 在线体验/游戏按钮：当前标签页直接跳转，玩完按一次返回即回到本简历页
             $$('[data-openweb]').forEach(el => {
-                el.addEventListener('click', () => openInThisTab(el.dataset.openweb));
+                el.addEventListener('click', (e) => {
+                    // 按住 Ctrl / ⌘ / Shift 或中键点击 = 想开新标签，交给浏览器原生处理
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    openInThisTab(el.dataset.openweb);
+                });
             });
             // PPT 幻灯片：点击复用弹窗全屏放大，并支持跨页左右翻页
             $$('[data-pptslide]').forEach(el => {
@@ -1311,8 +1316,7 @@
                             if (/^https?:\/\//i.test(item.link)) {
                                 // 在线链接默认当前标签页打开：返回键一次一步回到本简历页，不会残留 iframe 幽灵历史
                                 linkHtml = `<div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                                    <button type="button" data-openweb="${item.link}" class="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg px-3.5 py-2 transition-colors">${icon('play','w-3.5 h-3.5 shrink-0')} ${item.linkText || '在线体验'}</button>
-                                    <a href="${item.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-[10px] font-medium text-slate-500 hover:text-cyan-600 underline underline-offset-2 break-all">${icon('external-link','w-3 h-3 shrink-0')} 新标签打开</a>
+                                    <a href="${item.link}" data-openweb="${item.link}" class="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg px-3.5 py-2 transition-colors">${icon('play','w-3.5 h-3.5 shrink-0')} ${item.linkText || '在线体验'}</a>
                                 </div>`;
                             } else {
                                 linkHtml = `<a href="${item.link}" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-700 hover:text-cyan-500 underline underline-offset-2 break-all">${icon('external-link','w-3.5 h-3.5 shrink-0')} ${item.linkText || '在线体验'}：${item.link}</a>`;
